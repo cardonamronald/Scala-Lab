@@ -39,4 +39,3 @@ object Empty extends IntSet {
   def union (other: IntSet) : IntSet = Empty
 }
 
-
