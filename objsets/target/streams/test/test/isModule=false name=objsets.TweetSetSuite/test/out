@@ -1,8 +1,9 @@
 [0m[[0minfo[0m] [0m[32mTweetSetSuite:[0m[0m
 [0m[[0minfo[0m] [0m[32m- filter: on empty set[0m[0m
-[0m[[0minfo[0m] [0m[32m- filter: a on set5[0m[0m
+[0m[[0minfo[0m] [0m[31m- filter: a on set5 *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  4 did not equal 1 (TweetSetSuite.scala:38)[0m[0m
 [0m[[0minfo[0m] [0m[31m- filter: 20 on set5 *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  1 did not equal 2 (TweetSetSuite.scala:44)[0m[0m
+[0m[[0minfo[0m] [0m[31m  4 did not equal 2 (TweetSetSuite.scala:44)[0m[0m
 [0m[[0minfo[0m] [0m[32m- union: set4c and set4d[0m[0m
 [0m[[0minfo[0m] [0m[32m- union: with empty set (1)[0m[0m
 [0m[[0minfo[0m] [0m[32m- union: with empty set (2)[0m[0m

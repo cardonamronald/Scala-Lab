@@ -134,13 +134,15 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
 
     def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet = if (p(elem)) acc.incl(elem) else acc
 
-    def filter(p: Tweet => Boolean): TweetSet = filterAcc(p, new NonEmpty(elem, new Empty, new Empty))
+    def filter(p: Tweet => Boolean): TweetSet = {
+      filterAcc(p, new NonEmpty(elem, filterAcc(p, left), filterAcc(p, right)))
+    }
 
     def union(that: TweetSet): TweetSet = ((left union right) union that) incl elem
 
     def mostRetweeted : Tweet = {
-      def r = left.mostRetweeted
-      def l = right.mostRetweeted
+      def r = right.mostRetweeted
+      def l = left.mostRetweeted
 
       def a = r.retweets
       def b = l.retweets
