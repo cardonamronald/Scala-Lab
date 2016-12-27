@@ -1,6 +1,6 @@
 package objsets
 
-import TweetReader._
+//import TweetReader._
 
 /**
  * A class to represent tweets.
@@ -113,7 +113,7 @@ class Empty extends TweetSet {
 
   def union(that: TweetSet): TweetSet = that
 
-  def mostRetweeted: Tweet = null
+  def mostRetweeted: Tweet = new Tweet(" ", " ", 0)
 
   def descendingByRetweet: TweetList = Nil
 
@@ -136,11 +136,28 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
 
     def filter(p: Tweet => Boolean): TweetSet = filterAcc(p, new NonEmpty(elem, new Empty, new Empty))
 
-    def union(that: TweetSet): TweetSet
+    def union(that: TweetSet): TweetSet = ((left union right) union that) incl elem
 
-    def mostRetweeted: Tweet
+    def mostRetweeted : Tweet = {
+      def r = left.mostRetweeted
+      def l = right.mostRetweeted
 
-    def descendingByRetweet: TweetList
+      def a = r.retweets
+      def b = l.retweets
+      def c = elem.retweets
+      if (a > b) {
+        if (a > c) r else elem
+      } else if (b > c) l else elem
+    }
+
+    def descendingByRetweet: TweetList = new TweetList {
+
+      override def head: Tweet = mostRetweeted
+
+      override def tail: TweetList = remove(mostRetweeted).descendingByRetweet
+
+      override def isEmpty: Boolean = false
+    }
   
     
   /**
