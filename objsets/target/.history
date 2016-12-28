@@ -3,3 +3,12 @@ compile
 submit rcardo11@eafit.edu.co 6qSMNWhHtcoOVqa8
 test
 exit
+test
+run
+test
+run
+submit rcardo11@eafit.edu.co jN9So4C92xNkmJNK
+test
+submit rcardo11@eafit.edu.co jN9So4C92xNkmJNK
+cd ..
+exit

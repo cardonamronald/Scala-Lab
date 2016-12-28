@@ -1,6 +1,6 @@
 package objsets
 
-//import TweetReader._
+import TweetReader.allTweets
 
 /**
  * A class to represent tweets.
@@ -132,13 +132,20 @@ class Empty extends TweetSet {
 
 class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
 
-    def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet = if (p(elem)) acc.incl(elem) else acc
-
-    def filter(p: Tweet => Boolean): TweetSet = {
-      filterAcc(p, new NonEmpty(elem, filterAcc(p, left), filterAcc(p, right)))
+    def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet = {
+      foreach(elem => if (p(elem)) acc.incl(elem))
+      acc
     }
 
-    def union(that: TweetSet): TweetSet = ((left union right) union that) incl elem
+    def filter(p: Tweet => Boolean): TweetSet = {
+      filterAcc(p, new NonEmpty(elem, new Empty, new Empty))
+    }
+
+    def union(that: TweetSet): TweetSet = {
+      val that2 = that.incl(this.elem)
+      val that3 = this.left.union(that2)
+      this.right.union(that3)
+    gi}
 
     def mostRetweeted : Tweet = {
       def r = right.mostRetweeted
@@ -160,8 +167,7 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
 
       override def isEmpty: Boolean = false
     }
-  
-    
+
   /**
    * The following methods are already implemented
    */
@@ -215,14 +221,14 @@ object GoogleVsApple {
   val google = List("android", "Android", "galaxy", "Galaxy", "nexus", "Nexus")
   val apple = List("ios", "iOS", "iphone", "iPhone", "ipad", "iPad")
 
-    lazy val googleTweets: TweetSet = ???
-  lazy val appleTweets: TweetSet = ???
+    lazy val googleTweets: TweetSet = TweetReader.allTweets.filter(tw => google.exists(tw.text.contains))
+  lazy val appleTweets: TweetSet = TweetReader.allTweets.filter(tw => apple.exists(tw.text.contains))
   
   /**
    * A list of all tweets mentioning a keyword from either apple or google,
    * sorted by the number of retweets.
    */
-     lazy val trending: TweetList = ???
+     lazy val trending: TweetList = (googleTweets union appleTweets).descendingByRetweet
   }
 
 object Main extends App {
