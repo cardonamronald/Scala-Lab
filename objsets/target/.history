@@ -12,3 +12,8 @@ test
 submit rcardo11@eafit.edu.co jN9So4C92xNkmJNK
 cd ..
 exit
+submit rcardo11@eafit.edu.co APdYfHZObJHqpDNb
+exit
+test
+run
+submit rcardo11@eafit.edu.co QxAQ8GDNkQ0OmCPH
