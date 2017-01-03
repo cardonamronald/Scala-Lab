@@ -1,0 +1,9 @@
+--------------------------------------------------------------------------------------------------------------
+C[A] <: C[B] ----> A is a SubType of B -----> C is Covariant
+C[A] >: C[B] ----> A is a SuperType of B -----> C is contravariant
+Neither C[A] nor C[B] is a SubType of the other -----> C is NonVariant
+--------------------------------------------------------------------------------------------------------------
+
+Mutable -> We can update its elements. Such Arrays -> Not Covariant -----> Only appear in method result types;
+Immutable -> Such Lists -> Covariant (if some condicions are met) -----> Only appear in method paramether types;
+						-> Invariant -----> Appear anywhere;
