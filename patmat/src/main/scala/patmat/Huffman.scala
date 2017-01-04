@@ -24,14 +24,19 @@ object Huffman {
   
 
   // Part 1: Basics
-    def weight(tree: CodeTree): Int = ??? // tree match ...
-  
-    def chars(tree: CodeTree): List[Char] = ??? // tree match ...
-  
+    def weight(tree: CodeTree): Int = tree match {
+      case Leaf(char, weight) => weight
+      case Fork(l, r, chars, peso) => weight(l) + weight(r)
+  }
+
+
+    def chars(tree: CodeTree): List[Char] = tree match {
+      case Leaf(char, weight) => List(char)
+      case Fork(l, r, list, peso) => chars(l) ::: chars(r)
+    }
+
   def makeCodeTree(left: CodeTree, right: CodeTree) =
     Fork(left, right, chars(left) ::: chars(right), weight(left) + weight(right))
-
-
 
   // Part 2: Generating Huffman trees
 
@@ -70,18 +75,29 @@ object Huffman {
    *   }
    */
     def times(chars: List[Char]): List[(Char, Int)] = {
-    val list = new List[(Char, Int)]
 
-    def iter(chars: List[Char]): List[(Char, Int)] = {
-      def count(chars: List[Char], c: Char, cont: Int): Int = {
-        if (chars.nonEmpty) {
-          if (chars.head == c) count(chars.tail, c, cont += 1) else count(chars.tail, c, cont)
-        }
-        cont
+    val set = chars.distinct
+
+    def iter(chars: List[Char], set: List[Char], acum: List[(Char, Int)]): List[(Char, Int)] = {
+      if (set.nonEmpty) {
+        acum ::: List (set.head, count(chars.tail, set.head, 1))
+        iter (chars, set.tail, acum)
       }
-      list :: (c, count(chars, chars.head, 0))
+      acum
     }
-    list :: iter(chars.tail)
+
+    def count(chars: List[Char], char: Char, cont: Int): Int = {
+
+      if (chars.nonEmpty) {
+        if (chars.head == char) {
+          val c = cont + 1
+          count(chars.tail, char, c)
+        } else count(chars.tail, char, cont)
+      }
+      cont
+    }
+
+    iter(chars, set, List())
   }
   
   /**
@@ -96,7 +112,7 @@ object Huffman {
   /**
    * Checks whether the list `trees` contains only one single code tree.
    */
-    def singleton(trees: List[CodeTree]): Boolean = ???
+    def singleton(trees: List[CodeTree]): Boolean = if (trees.nonEmpty && trees.tail.isEmpty) true else false
   
   /**
    * The parameter `trees` of this function is a list of code trees ordered
