@@ -30,3 +30,4 @@ class Succ (n : Natural) extends Natural {
   def - (that : Natural) = if (that.isZero) this
     else n - that.predecessor
 }
+
