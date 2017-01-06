@@ -51,4 +51,8 @@ class HuffmanSuite extends FunSuite {
     }
   }
 
+  test("Times of a list") {
+    assert(times(List('a', 'b', 'b', 'a')) == List(('a', 2), ('b', 2)))
+  }
+
 }
