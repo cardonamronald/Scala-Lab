@@ -1,8 +1,11 @@
+import scala.annotation.tailrec
+
 //This method removes the element at index n.
 
 def removeAt[T] (n : Int, xs : List[T]) : List[T] = {
 
-  def rec [T] (n : Int, xs : List[T], ys: List[T]) : List[T] = {
+  @tailrec
+  def rec [T] (n : Int, xs : List[T], ys: List[T]) = {
     if (n == 0) xs ::: ys.tail
     else rec (n - 1, xs ::: List(ys.head), ys.tail)
   }
@@ -12,4 +15,5 @@ def removeAt[T] (n : Int, xs : List[T]) : List[T] = {
 }
 
 removeAt(1, List('a', 'b', 'c', 'd'))
+
 
