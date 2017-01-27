@@ -12,4 +12,3 @@ def balance(chars: List[Char]): Boolean = {
   }
   if (count(chars, 0) == 0) true else false
 }
-balance("Hola)".toList)

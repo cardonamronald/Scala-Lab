@@ -22,18 +22,19 @@ object Main {
    * Exercise 2
   */
   def balance(chars: List[Char]): Boolean = {
-    if (chars.isEmpty) true
-    def count (arr : List[Char], cont : Int) : Int = {
-      var c = cont
-      if (!(arr.isEmpty)) {
-        if (arr.head.equals('(')) c += 1
-        if (arr.head.equals(')')) c -= 1
-        count(arr.tail, c)
-      }
-      else cont
 
+    def count (arr : List[Char], cont : Int) : Int = {
+      if (cont < 0) cont else {
+        var c = cont
+        if (arr.nonEmpty) {
+          if (arr.head.equals('(')) c += 1
+          if (arr.head.equals(')')) c -= 1
+          count(arr.tail, c)
+        }
+        else cont
+      }
     }
-    if (count(chars, 0) == 0) true else false
+    if (chars.isEmpty) true else count(chars, 0) == 0
   }
 
 
@@ -41,24 +42,6 @@ object Main {
    * Exercise 3
   */
   def countChange(money: Int, coins: List[Int]): Int = {
-      var cont = 0
 
-      def change (money : Int, acum : Int, coins : List[Int]) : Int = {
-        if (money == 0 || coins.isEmpty) cont else {
-          if (coins.head == money) cont += 1
-
-          //'if (coins.head < money) acum += coins.head
-
-          if ((coins.head + acum) == money) cont += 1
-
-          if ((coins.head + acum) < money) {
-            val v = acum + coins.head
-            change(money, v, coins)
-          }
-
-          cont
-        }
-      }
-      change(money, 0, coins)
     }
 }
