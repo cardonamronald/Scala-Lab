@@ -23,18 +23,19 @@ def leftQuotient (L : Set[String], L2 : Set[String]) : Set[String] = {
   helper(L, L2)
 }
 
-def L7 = Set("10", "01")
-def L10 = Set("∈", "0")
-def L = Set("")
-
 def power (str : String, n : Int) : String = str * n
 
 def lPower (original : Set[String], E : Set[String], n : Int) : Set[String] = {
   if (n == 0) E else {
     val e = for {
-      str <- original
-      str1 <- E
+              str <- original
+              str1 <- E
     } yield str.concat(str1)
     lPower(original, e, n - 1)
   }
 }
+
+def L7 = Set("10", "01")
+def L10 = Set("∈", "0")
+def L = Set("")
+
