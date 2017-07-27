@@ -11,7 +11,6 @@ def queens (n : Int) : Set[List[Int]] = {
         if isSafe(col, queens)
       } yield col :: queens
   }
-
   placeQueens(n)
 }
 
@@ -27,7 +26,7 @@ def show (queens : List[Int]) = {
   val lines =
     for (col <- queens.reverse)
       yield Vector.fill(queens.length)("* ").updated(col, "X ").mkString
-  "\n" + (lines mkString "\n")
+      "\n" + (lines mkString "\n")
 }
 
-
+//for (q <- queens(4)) yield show(q) + '\n'

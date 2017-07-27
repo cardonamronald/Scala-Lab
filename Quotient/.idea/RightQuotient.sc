@@ -35,7 +35,8 @@ def lPower (original : Set[String], E : Set[String], n : Int) : Set[String] = {
   }
 }
 
-def L7 = Set("10", "01")
+def L7 = Set("∈10", "∈01")
 def L10 = Set("∈", "0")
 def L = Set("")
 
+def listaAdy
