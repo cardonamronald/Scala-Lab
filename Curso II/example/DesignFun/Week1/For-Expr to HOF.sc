@@ -1,3 +1,16 @@
+val n = 6
+for {
+  i <- 1 until n
+  j <- 1 until i
+  if isPrime(i + j)
+} yield (i, j)
+
+(1 until n) flatMap( i =>
+  (1 until i).withFilter(j => isPrime(i + j))
+    .map(j => (i, j))
+  )
+def isPrime(a: Int): Boolean = true
+
 case class Book (title: String, authors: List[String])
 
 val books: Set[Book] = Set (
@@ -8,18 +21,12 @@ val books: Set[Book] = Set (
   Book(title = "Java Puzzlers", authors = List("Bloch, Joshua", "Gafer, Neal")),
   Book(title = "Programming in Scala", authors = List("Odersky, Martin", "Spoon, Lex", "Venners, Bill"))
 )
-
 for (b <- books; a <- b.authors if a startsWith "Bloch") yield b.title
 
-//Find all the books which have the word 'Program' in the title
-for (b <- books; if b.title contains "Program") yield b.title
+books.flatMap(x => for(b <- x.authors; if b.startsWith("Bloch")) yield b)
 
-//Find the names of all authors who have written at least two books
-for {
-  b1 <- books
-  b2 <- books
-  if b1.title < b2.title
-  a1 <- b1.authors
-  a2 <- b2.authors
-  if a1 == a2
-} yield a1
+books.flatMap(book => book.authors withFilter(authors => authors.startsWith("Bloch")) map ())
+
+
+
+
