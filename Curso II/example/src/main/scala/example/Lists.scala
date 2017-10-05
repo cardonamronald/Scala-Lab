@@ -24,7 +24,7 @@ object Lists {
    * @return The sum of all elements in `xs`
    */
 
-  def sum(xs: List[Int]): Int = xs match {
+  def sum (xs: List[Int]): Int = xs match {
     case x :: Nil => x
     case x :: xs => x + sum(xs)
   }
