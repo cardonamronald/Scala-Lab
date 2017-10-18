@@ -1,5 +1,7 @@
 package streams
 
+import javafx.geometry.Pos
+
 import common._
 
 /**
@@ -19,9 +21,9 @@ import common._
  * - The `-` character denotes parts which are outside the terrain
  * - `o` denotes fields which are part of the terrain
  * - `S` denotes the start position of the block (which is also considered
-     inside the terrain)
+  * inside the terrain)
  * - `T` denotes the final position of the block (which is also considered
-     inside the terrain)
+  * inside the terrain)
  *
  * In this example, the first and last lines could be omitted, and
  * also the columns that consist of `-` characters only.
@@ -52,7 +54,13 @@ trait StringParserTerrain extends GameDef {
    * a valid position (not a '-' character) inside the terrain described
    * by `levelVector`.
    */
-  def terrainFunction(levelVector: Vector[Vector[Char]]): Pos => Boolean = ???
+  def terrainFunction(levelVector: Vector[Vector[Char]]): Pos => Boolean =
+    position {
+      val (x, y) = (position.row, position.col)
+      val inside = x >= 0 && x < levelVector.length &&
+        y >= 0 && y < levelVector(x).length
+      inside && levelVector(x)(y) != '-'
+    }
 
   /**
    * This function should return the position of character `c` in the
@@ -62,7 +70,12 @@ trait StringParserTerrain extends GameDef {
    * Hint: you can use the functions `indexWhere` and / or `indexOf` of the
    * `Vector` class
    */
-  def findChar(c: Char, levelVector: Vector[Vector[Char]]): Pos = ???
+  def findChar(c: Char, levelVector: Vector[Vector[Char]]): Pos = for {
+      row <- 0 until levelVector.length
+      col <- 0 until levelVector(0).length
+      if levelVector(row)(col) == c
+    } yield (row, col)
+
 
   private lazy val vector: Vector[Vector[Char]] =
     Vector(level.split("\n").map(str => Vector(str: _*)): _*)
@@ -70,5 +83,4 @@ trait StringParserTerrain extends GameDef {
   lazy val terrain: Terrain = terrainFunction(vector)
   lazy val startPos: Pos = findChar('S', vector)
   lazy val goal: Pos = findChar('T', vector)
-
 }
