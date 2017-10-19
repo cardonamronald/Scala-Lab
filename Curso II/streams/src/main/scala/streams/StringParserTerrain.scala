@@ -59,6 +59,7 @@ trait StringParserTerrain extends GameDef {
       val (x, y) = (position.row, position.col)
       val inside = x >= 0 && x < levelVector.length &&
         y >= 0 && y < levelVector(x).length
+
       inside && levelVector(x)(y) != '-'
     }
 
@@ -74,7 +75,7 @@ trait StringParserTerrain extends GameDef {
       row <- 0 until levelVector.length
       col <- 0 until levelVector(0).length
       if levelVector(row)(col) == c
-    } yield (row, col)
+    } yield Pos(row, col)
 
 
   private lazy val vector: Vector[Vector[Char]] =
