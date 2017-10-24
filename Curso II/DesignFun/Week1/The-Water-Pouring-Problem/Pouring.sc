@@ -58,6 +58,7 @@ class Pouring(capacity: Vector[Int]) {
       paths #:: from(more, explored ++ (more map (_.endState)))
     }
   }
+  
   val pathSets = from(Set(initialPath), Set(initialState))
 
   def solution(target: Int) : Stream[Path] = {
