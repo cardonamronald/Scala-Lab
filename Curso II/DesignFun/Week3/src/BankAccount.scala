@@ -1,7 +1,5 @@
 package Week3
-/**
-  * Created by RONALD on 24/10/2017.
-  */
+
 class BankAccount {
   private var balance = 0
   def deposit(amount: Int): Unit {
