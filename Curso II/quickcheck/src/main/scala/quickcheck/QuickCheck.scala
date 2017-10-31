@@ -16,5 +16,4 @@ abstract class QuickCheckHeap extends Properties("Heap") with IntHeap {
     val m = if (isEmpty(h)) 0 else findMin(h)
     findMin(insert(m, h)) == m
   }
-
 }

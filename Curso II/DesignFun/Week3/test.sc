@@ -1,4 +1,3 @@
 package Week3
-
-object sim extends Circuits with Parameters
 import sim._
+object sim extends Circuits with Parameters

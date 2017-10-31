@@ -17,16 +17,16 @@
 [0m[[0minfo[0m] [0mCompiling 7 Scala sources to C:\Users\RONALD\Documents\EAFIT\SCALA\Curso II\streams\target\scala-2.11\classes...[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 5d4d4902, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 4d156baf, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-deprecation[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jdk1.8.0_121\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_121\jre\classes;C:\Users\RONALD\.coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.7\scala-library-2.11.7.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
 [0m[[0mdebug[0m] [0m	C:\Users\RONALD\Documents\EAFIT\SCALA\Curso II\streams\target\scala-2.11\classes;C:\Users\RONALD\.coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.7\scala-reflect-2.11.7.jar;C:\Users\RONALD\.coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\test-interface\1.0\test-interface-1.0.jar;C:\Users\RONALD\.coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\RONALD\.coursier\cache\v1\https\repo1.maven.org\maven2\org\scalacheck\scalacheck_2.11\1.12.1\scalacheck_2.11-1.12.1.jar;C:\Users\RONALD\.coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.4\scala-xml_2.11-1.0.4.jar;C:\Users\RONALD\.coursier\cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest_2.11\2.2.4\scalatest_2.11-2.2.4.jar[0m
-[0m[[31merror[0m] [0mC:\Users\RONALD\Documents\EAFIT\SCALA\Curso II\streams\src\main\scala\streams\Solver.scala:17: illegal start of simple expression[0m
-[0m[[31merror[0m] [0m  def neighborsWithHistory(b: Block, history: List[Move]): Stream[(Block, List[Move])] = {[0m
-[0m[[31merror[0m] [0m  ^[0m
+[0m[[31merror[0m] [0mC:\Users\RONALD\Documents\EAFIT\SCALA\Curso II\streams\src\main\scala\streams\Solver.scala:6: Solver is already defined as trait Solver[0m
+[0m[[31merror[0m] [0mtrait Solver extends GameDef {[0m
+[0m[[31merror[0m] [0m      ^[0m
 [0m[[31merror[0m] [0mone error found[0m
 [0m[[0mdebug[0m] [0mCompilation failed (CompilerInterface)[0m
 [0m[[31merror[0m] [0m(compile:[31mcompileIncremental[0m) Compilation failed[0m

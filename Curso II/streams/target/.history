@@ -35,3 +35,19 @@ test
 console
 compile
 exit
+comoile
+compile
+sbt submit
+submit
+clear
+exit
+compile
+clean
+exit
+clear
+clean
+exit
+compile
+clean
+compile
+exit
