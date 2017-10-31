@@ -2,23 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c92d85b-e916-42bd-af92-14a83878d44f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/$global/console/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/$global/ivySbt/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/runtime/unmanagedJars/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/test/managedClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/test/test/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/test/unmanagedClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/test/unmanagedJars/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/hs_err_pid5008.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/hs_err_pid5888.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/hs_err_pid7768.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/replay_pid5008.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/replay_pid5888.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/replay_pid7768.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/$global/$global/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/$global/coursierArtifacts/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/$global/coursierResolution/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/$global/update/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/compile/compile/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/compile/compileIncremental/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/compile/compileIncremental/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/compile/managedClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/compile/unmanagedClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/compile/unmanagedJars/$global/streams/export" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Curso II/streams/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" afterPath="$PROJECT_DIR$/Curso II/streams/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Curso II/streams/project/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="$PROJECT_DIR$/Curso II/streams/project/target/streams/compile/copyResources/$global/streams/copy-resources" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Curso II/DesignFun/Week3/test.sc" afterPath="$PROJECT_DIR$/Curso II/DesignFun/Week3/test.sc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Curso II/quickcheck/src/main/scala/quickcheck/Heap.scala" afterPath="$PROJECT_DIR$/Curso II/quickcheck/src/main/scala/quickcheck/Heap.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Curso II/quickcheck/src/main/scala/quickcheck/QuickCheck.scala" afterPath="$PROJECT_DIR$/Curso II/quickcheck/src/main/scala/quickcheck/QuickCheck.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Curso II/streams/src/main/scala/streams/Solver.scala" afterPath="$PROJECT_DIR$/Curso II/streams/src/main/scala/streams/Solver.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Curso II/streams/target/.history" afterPath="$PROJECT_DIR$/Curso II/streams/target/.history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Curso II/streams/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/Curso II/streams/target/streams/compile/compileIncremental/$global/streams/out" />
     </list>
     <ignored path="SCALA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +45,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Solver.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Curso II/streams/src/main/scala/streams/Solver.scala">
+      <file leaf-file-name="streamRange.sc" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/streamRange.sc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1751">
-              <caret line="103" column="1" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
+            <state relative-caret-position="136">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -664,14 +670,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/streamRange.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso II/DesignFun/Week1/The Water Pouring Problem/Pouring.sc" />
     <entry file="file://$PROJECT_DIR$/Curso II/DesignFun/Week1/The Water Pouring Problem/The Water Pouring Problem.sc" />
     <entry file="file://$PROJECT_DIR$/Curso II/DesignFun/Week1/primesLazy.sc">
       <provider selected="true" editor-type-id="text-editor">
@@ -995,6 +993,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
           <caret line="103" column="1" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hs_err_pid800.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/streamRange.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
