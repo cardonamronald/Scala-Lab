@@ -1,7 +1,7 @@
 /**
   * Created by RONALD on 01/11/2017.
   */
-package Week4
+package BankAccountWithEventHandling
 
 class BankAccount extends Publisher {
   private var balance = 0

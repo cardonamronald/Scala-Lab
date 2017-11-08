@@ -1,4 +1,4 @@
-package Week4
+package BankAccountWithEventHandling
 object observers {
   val a = new BankAccount
   val b = new BankAccount

@@ -1,7 +1,7 @@
 /**
   * Created by RONALD on 01/11/2017.
   */
-package Week4
+package BankAccountWithEventHandling
 
 import scala.collection.mutable
 

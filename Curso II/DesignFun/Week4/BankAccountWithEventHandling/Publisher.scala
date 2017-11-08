@@ -1,9 +1,4 @@
-/**
-  * Created by RONALD on 01/11/2017.
-  */
-package  Week4
-
-import scala.collection.mutable
+package BankAccountWithEventHandling
 
 trait Publisher {
   private var subscribers: Set[Subscriber] = Set()
