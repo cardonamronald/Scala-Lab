@@ -1,0 +1,10 @@
+coursier.ResolutionException: 4 download error
+  Caught java.net.SocketTimeoutException: Read timed out (Read timed out)
+  Caught java.net.SocketTimeoutException: Read timed out (Read timed out)
+  Caught java.net.SocketTimeoutException: Read timed out (Read timed out)
+  Caught java.net.SocketTimeoutException: Read timed out (Read timed out)
+[0m[[31merror[0m] [0m(webUI/*:[31mupdate[0m) coursier.ResolutionException: 4 download error[0m
+[0m[[31merror[0m] [0m  Caught java.net.SocketTimeoutException: Read timed out (Read timed out)[0m
+[0m[[31merror[0m] [0m  Caught java.net.SocketTimeoutException: Read timed out (Read timed out)[0m
+[0m[[31merror[0m] [0m  Caught java.net.SocketTimeoutException: Read timed out (Read timed out)[0m
+[0m[[31merror[0m] [0m  Caught java.net.SocketTimeoutException: Read timed out (Read timed out)[0m
