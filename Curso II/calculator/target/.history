@@ -23,3 +23,15 @@ webUI/fastOptJS
 make clean
 clean
 exit
+compile
+webUI/fastOptJS
+compile
+webUI/fastOptJS
+compile
+webUI/fastOptJS
+exit
+compile
+webUI/fastOptJS
+last webUI/compile:compileIncremental
+compile
+webUI/fastOptJS
