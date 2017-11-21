@@ -35,3 +35,7 @@ webUI/fastOptJS
 last webUI/compile:compileIncremental
 compile
 webUI/fastOptJS
+conoile
+compile
+clean
+exit
