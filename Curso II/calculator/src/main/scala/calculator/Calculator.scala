@@ -23,8 +23,6 @@ object Calculator {
       }
   }
 
-
-
   def eval(expr: Expr, references: Map[String, Signal[Expr]]): Double = expr match {
     case Divide(a, b) => eval(a, references) / eval(b, references)
     case Times(a, b) => eval(a, references) * eval(b, references)
