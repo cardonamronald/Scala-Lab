@@ -16,11 +16,11 @@ object Calculator {
       if !(references.contains(me) || references.foreach(getRefs(_).contains(me)))
     } yield (expr._1, eval(expr._2, references))
 
-      def getRefs(expr: Expr) = expr match {
-        case Ref(name) => (name, namedExpressions.get(name)) :: getRefs(namedExpressions.get(name))
-        case _(a, b) => getRefs(a) :: getRefs(b)
-        case Literal(v) => _
-      }
+    def getRefs(expr: Expr) = expr match {
+      case Ref(name) => (name, namedExpressions.get(name)) :: getRefs(namedExpressions.get(name))
+      case _(a, b) => getRefs(a) :: getRefs(b)
+      case Literal(v) => _
+    }
   }
 
   def eval(expr: Expr, references: Map[String, Signal[Expr]]): Double = expr match {
@@ -33,10 +33,10 @@ object Calculator {
   }
 
   /** Get the Expr for a referenced variables.
-   *  If the variable is not known, returns a literal NaN.
-   */
+    *  If the variable is not known, returns a literal NaN.
+    */
   private def getReferenceExpr(name: String,
-      references: Map[String, Signal[Expr]]) = {
+                               references: Map[String, Signal[Expr]]) = {
     references.get(name).fold[Expr] {
       Literal(Double.NaN)
     } { exprSignal =>
