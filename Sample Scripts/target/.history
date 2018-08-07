@@ -1,0 +1,5 @@
+console
+:load hello.scala 
+:load hello.scala
+:load 
+console

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c92d85b-e916-42bd-af92-14a83878d44f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sample Scripts/hello.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sample Scripts/helloarg.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SCALA.iws" />
@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hello.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Sample Scripts/hello.scala">
+      <file leaf-file-name="helloarg.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Sample Scripts/helloarg.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+              <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -108,6 +108,7 @@
         <option value="$PROJECT_DIR$/Curso II/calculator/src/main/scala/calculator/Polynomial.scala" />
         <option value="$PROJECT_DIR$/Curso II/calculator/src/main/scala/calculator/TweetLength.scala" />
         <option value="$PROJECT_DIR$/Sample Scripts/hello.scala" />
+        <option value="$PROJECT_DIR$/Sample Scripts/helloarg.scala" />
       </list>
     </option>
   </component>
@@ -210,7 +211,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/bloxorz-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sample Scripts/helloarg.scala" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="SearchEverywhereHistoryKey" value="&#9;null&#9;null" />
   </component>
@@ -223,14 +224,7 @@
       <recent name="C:\Users\RONALD\Documents\EAFIT\SCALA\Curso II\DesignFun\Week1\The Water Pouring Problem" />
     </key>
   </component>
-  <component name="RunManager" selected="Scala Console.Scala Console">
-    <configuration default="false" name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true">
-      <module name="SCALA" />
-      <setting name="vmparams4" value="-Djline.terminal=NONE" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="consoleArgs" value="-usejavacp" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Scala Script.Script">
     <configuration default="false" name="Bloxorz" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -249,6 +243,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="SCALA" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true">
+      <module name="SCALA" />
+      <setting name="vmparams4" value="-Djline.terminal=NONE" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="consoleArgs" value="-usejavacp" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -546,9 +547,19 @@
       <envs />
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Bloxorz" />
+    <configuration default="false" name="Script" type="ScalaScriptRunConfiguration" factoryName="Scala Script">
+      <module name="SCALA" />
+      <setting name="path" value="C:\Users\RONALD\Documents\EAFIT\SCALA\Sample Scripts\helloarg.scala" />
+      <setting name="vmparams" value="" />
+      <setting name="consoleargs" value="" />
+      <setting name="params" value="planet" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Application.Bloxorz" />
+      <item index="1" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
+      <item index="2" class="java.lang.String" itemvalue="Scala Script.Script" />
     </list>
     <recent_temporary>
       <list size="2">
@@ -688,7 +699,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/Solver.scala" />
     <entry file="file://$PROJECT_DIR$/Curso II/streams/src/main/scala/streams/Solver.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
@@ -1012,7 +1022,17 @@
     <entry file="file://$PROJECT_DIR$/Sample Scripts/hello.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sample Scripts/helloarg.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
