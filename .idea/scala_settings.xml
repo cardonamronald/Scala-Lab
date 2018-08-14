@@ -9,4 +9,8 @@
     </option>
     <option name="useEclipseCompatibility" value="true" />
   </component>
+  <component name="WorksheetDefaultProjectSettings">
+    <option name="compilerProfileName" value="Default" />
+    <option name="moduleName" value="SCALA" />
+  </component>
 </project>
