@@ -6,13 +6,16 @@ sortedasc.sum
 val sorteddesc = a.sortWith(_<_)
 sorteddesc.sum
 
-sortedasc match {
-  case x :: Nil => BigDecimal(x).setScale(4, BigDecimal.RoundingMode.HALF_UP)
-  case x :: xs => BigDecimal(x + xs.head).setScale(4, BigDecimal.RoundingMode.HALF_UP)
+def sum (xs: List[Int]): Int = {
+  xs match {
+    case x :: tail => x + sum(tail)
+    case Nil => 0
+  }
 }
+
 
 sorteddesc match {
   case x :: Nil => BigDecimal(x).setScale(4, BigDecimal.RoundingMode.HALF_UP)
   case x :: xs => BigDecimal(x + xs.head).setScale(4, BigDecimal.RoundingMode.HALF_UP)
-
+  case Nil =>
 }
