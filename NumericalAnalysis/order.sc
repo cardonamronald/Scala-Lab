@@ -7,11 +7,12 @@ val sorteddesc = a.sortWith(_<_)
 sorteddesc.sum
 
 sortedasc match {
-  case x :: xs => BigDecimal(x + xs.head).setScale(4, BigDecimal.RoundingMode.HALF_UP)
   case x :: Nil => BigDecimal(x).setScale(4, BigDecimal.RoundingMode.HALF_UP)
+  case x :: xs => BigDecimal(x + xs.head).setScale(4, BigDecimal.RoundingMode.HALF_UP)
 }
 
 sorteddesc match {
-  case x :: xs => BigDecimal(x + xs.head).setScale(4, BigDecimal.RoundingMode.HALF_UP)
   case x :: Nil => BigDecimal(x).setScale(4, BigDecimal.RoundingMode.HALF_UP)
+  case x :: xs => BigDecimal(x + xs.head).setScale(4, BigDecimal.RoundingMode.HALF_UP)
+
 }
