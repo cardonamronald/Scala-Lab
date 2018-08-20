@@ -13,9 +13,15 @@ def sum (xs: List[Int]): Int = {
   }
 }
 
+sortedasc match {
+  case x :: Nil => BigDecimal(x).setScale(4, BigDecimal.RoundingMode.HALF_UP)
+  case x :: xs => BigDecimal(x + xs.head).setScale(4, BigDecimal.RoundingMode.HALF_UP)
+  case Nil => 0
+}
+
 
 sorteddesc match {
   case x :: Nil => BigDecimal(x).setScale(4, BigDecimal.RoundingMode.HALF_UP)
   case x :: xs => BigDecimal(x + xs.head).setScale(4, BigDecimal.RoundingMode.HALF_UP)
-  case Nil =>
+  case Nil => 0
 }
