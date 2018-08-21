@@ -11,11 +11,10 @@ parseBinToInt(parseDecToBin(30, "").toList, 0)
 def parseBinToInt(word: List[Char], i: Int): Int = {
   val w: List[Char] = word.reverse
   w match {
-    case '1' :: xs => 2^i + parseBinToInt(xs, i+1)
+    case '0' :: Nil => 0
     case '0' :: Nil => 0
     case '1' :: xs => 2^i + parseBinToInt(xs, i+1)
-    case '0' :: Nil => 0
-    case =>
+    case '1' :: xs => 2^i + parseBinToInt(xs, i+1)
   }
 }
 
