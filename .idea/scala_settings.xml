@@ -11,6 +11,7 @@
   </component>
   <component name="WorksheetDefaultProjectSettings">
     <option name="compilerProfileName" value="Default" />
+    <option name="interactive" value="true" />
     <option name="moduleName" value="SCALA" />
   </component>
 </project>

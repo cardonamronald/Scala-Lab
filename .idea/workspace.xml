@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c92d85b-e916-42bd-af92-14a83878d44f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SCALA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SCALA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClassesAndObjects/Classes.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClassesAndObjects/SingletonObjects.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/scala_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="SCALA.iws" />
@@ -23,32 +22,39 @@
     <session id="-2018951514">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="sc" value="10" />
-          <entry key="scala" value="1" />
+          <entry key="gitattributes" value="1" />
+          <entry key="sc" value="26" />
+          <entry key="scala" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Scala" value="11" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Scala" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="sc" value="62" />
-          <entry key="scala" value="34" />
+          <entry key="sc" value="2806" />
+          <entry key="scala" value="141" />
+          <entry key="txt" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Scala" value="96" />
+          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="Scala" value="2947" />
         </counts>
       </usages-collector>
     </session>
@@ -59,19 +65,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NumericalAnalysis/mclaurinseries.scala">
+        <entry file="file://$PROJECT_DIR$/ClassesAndObjects/Classes.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+            <state relative-caret-position="72">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NumericalAnalysis/Series.sc">
+        <entry file="file://$PROJECT_DIR$/ClassesAndObjects/SingletonObjects.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+            <state relative-caret-position="459">
+              <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -82,8 +88,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Scala Script" />
         <option value="Scala Worksheet" />
+        <option value="Scala Script" />
       </list>
     </option>
   </component>
@@ -94,15 +100,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Curso II/streams/src/main/scala/streams/StringParserTerrain.scala" />
-        <option value="$PROJECT_DIR$/Curso II/DesignFun/Week3/src/account.sc" />
-        <option value="$PROJECT_DIR$/Curso II/DesignFun/Week3/src/BankAccount.scala" />
-        <option value="$PROJECT_DIR$/Curso II/DesignFun/Week3/Simulation.scala" />
-        <option value="$PROJECT_DIR$/Curso II/DesignFun/Week3/Gates.scala" />
-        <option value="$PROJECT_DIR$/Curso II/DesignFun/Week3/Circuits.scala" />
-        <option value="$PROJECT_DIR$/Curso II/DesignFun/Week3/Parameters.scala" />
-        <option value="$PROJECT_DIR$/Curso II/DesignFun/Week3/src/test.sc" />
-        <option value="$PROJECT_DIR$/Curso II/DesignFun/Week3/test.sc" />
         <option value="$PROJECT_DIR$/Curso II/streams/src/main/scala/streams/Solver.scala" />
         <option value="$PROJECT_DIR$/Curso II/quickcheck/src/main/scala/quickcheck/Heap.scala" />
         <option value="$PROJECT_DIR$/Curso II/quickcheck/src/main/scala/quickcheck/QuickCheck.scala" />
@@ -145,6 +142,15 @@
         <option value="$PROJECT_DIR$/Sample Scripts/files.scala" />
         <option value="$PROJECT_DIR$/NumericalAnalysis/mclaurinseries.scala" />
         <option value="$PROJECT_DIR$/NumericalAnalysis/Series.sc" />
+        <option value="$PROJECT_DIR$/NumericalAnalysis/order.sc" />
+        <option value="$PROJECT_DIR$/NumericalAnalysis/sumaBajoUno.sc" />
+        <option value="$PROJECT_DIR$/Curso I/funsets/src/main/scala/funsets/FunSets.scala" />
+        <option value="$PROJECT_DIR$/Curso I/patmat/src/main/scala/patmat/Huffman.scala" />
+        <option value="$PROJECT_DIR$/NumericalAnalysis/32BitMachine .sc" />
+        <option value="$PROJECT_DIR$/ClassesAndObjects/Classes.sc" />
+        <option value="$PROJECT_DIR$/ClassesAndObjects/SingletonObjects.sc" />
+        <option value="$PROJECT_DIR$/ClassesAndObjects/Classes.scala" />
+        <option value="$PROJECT_DIR$/ClassesAndObjects/SingletonObjects.scala" />
       </list>
     </option>
   </component>
@@ -177,7 +183,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -188,35 +194,35 @@
             <path>
               <item name="SCALA" type="b2602c69:ProjectViewProjectNode" />
               <item name="SCALA" type="462c0819:PsiDirectoryNode" />
-              <item name="NumericalAnalysis" type="462c0819:PsiDirectoryNode" />
+              <item name="ClassesAndObjects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SCALA" type="b2602c69:ProjectViewProjectNode" />
               <item name="SCALA" type="462c0819:PsiDirectoryNode" />
-              <item name="Sample Scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="NumericalAnalysis" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;null&#9;null" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534222437349" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534905683181" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="Scala Compiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="C:\Users\RONALD\Documents\EAFIT\SCALA\Curso II\DesignFun\Week4\BankAccountWithEventHandling" />
       <recent name="C:\Users\RONALD\Documents\EAFIT\SCALA\Curso II\DesignFun\Week1" />
       <recent name="C:\Users\RONALD\Documents\EAFIT\SCALA\Curso II\DesignFun\Week3" />
       <recent name="C:\Users\RONALD\Documents\EAFIT\SCALA\Curso II\DesignFun\Week3\src" />
-      <recent name="C:\Users\RONALD\Documents\EAFIT\SCALA\Curso II\DesignFun\Week1\The Water Pouring Problem" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -495,20 +501,20 @@
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.50486785" side_tool="true" weight="0.19640565" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.49513212" visible="true" weight="0.14306152" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.49513212" visible="true" weight="0.16595136" />
       <window_info id="Structure" order="5" weight="0.24962178" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" weight="0.24756606" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.22905983" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.24096386" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.32962447" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="1.0" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.15783133" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="SBT" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
@@ -535,9 +541,12 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Curso I/spark-kmeans" />
     </ignored-roots>
+    <MESSAGE value="32BitMachine" />
+    <option name="LAST_COMMIT_MESSAGE" value="32BitMachine" />
   </component>
   <component name="WorksheetDefaultProjectSettings">
     <option name="compilerProfileName" value="Default" />
+    <option name="interactive" value="true" />
     <option name="moduleName" value="SCALA" />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -545,64 +554,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Curso I/patmat/src/main/scala/patmat/Huffman.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4217">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/objsets/src/main/scala/objsets/TweetData.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12206">
-          <caret line="718" column="1" selection-start-line="718" selection-start-column="1" selection-end-line="718" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/objsets/src/main/scala/objsets/TweetReader.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" column="67" selection-start-line="74" selection-start-column="67" selection-end-line="74" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/objsets/src/main/scala/objsets/TweetSet.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1067">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week6/j.sc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week6/Session2.sc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week5/Session1.sc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week5/Session2.sc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week5/Session4.sc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week5/Session3.sc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week6/Session1.sc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week4/Session3.sc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week4/Session4.sc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week4/Session6.sc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Curso I/progfun/week3/Session3.sc">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -766,17 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#46#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NumericalAnalysis/mclaurinseries.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -829,10 +769,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NumericalAnalysis/mclaurinseries.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NumericalAnalysis/Series.sc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NumericalAnalysis/order.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NumericalAnalysis/sumaBajoUno.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/funsets/src/main/scala/funsets/FunSets.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" column="62" lean-forward="true" selection-start-line="78" selection-start-column="62" selection-end-line="78" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/patmat/src/main/scala/patmat/Huffman.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2980">
+          <caret line="264" column="21" lean-forward="true" selection-start-line="264" selection-start-column="21" selection-end-line="264" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week5/Session4.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week6/j.sc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week6/Session1.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="41" lean-forward="true" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week6/Session2.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NumericalAnalysis/32BitMachine .sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassesAndObjects/SingletonObjects.sc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassesAndObjects/Classes.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassesAndObjects/Classes.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassesAndObjects/SingletonObjects.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
         </state>
       </provider>
     </entry>
