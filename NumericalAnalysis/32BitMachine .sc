@@ -7,7 +7,6 @@ def parseDecToBin(n: Int, word: String): String = {
 }
 parseBinToInt(parseDecToBin(30, "").toList, 0)
 
-
 def parseBinToInt(word: List[Char], i: Int): Int = {
   val w: List[Char] = word.reverse
   w match {

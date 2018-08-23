@@ -1,5 +1,4 @@
 import scala.collection.mutable
-
 object ChecksumAccumulator{
 
   private val cache = mutable.Map.empty[String, Int]
@@ -16,8 +15,6 @@ object ChecksumAccumulator{
       cs
     }
 }
-
-ChecksumAccumulator.calculate("Ronald Cardona Martinez")
 
 class CheckSumAccumulator {
 
