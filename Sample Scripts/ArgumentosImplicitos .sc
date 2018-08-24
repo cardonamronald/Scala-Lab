@@ -9,7 +9,7 @@ sum_ten(3)
 def sum[T](l: List[Int]): Int = {
   l.foldLeft(0)(_ + _)
 }
-
+sum(List(1, 2, 3, 4, 5, 6, 7, 8, 9))
 
 //Polimorfismo dinamico
 def sum[T](l: List[T])(implicit Nt: Numeric[T]): T = {

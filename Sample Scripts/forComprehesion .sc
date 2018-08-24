@@ -27,10 +27,17 @@ def applyG[T, G](a: List[T], f: T => G): List[G] = a.map(f)
 
 //Ejemplo, tablas de multiplicar
 
+
+0 to 10 flatMap { i =>
+ 0 to 10 map (j => (i, j)) filter((i, j) => i * j)
+}
+
+
+
 /**0 to 10 flatMap{i =>
   (0 to 10) map {j =>
     (i, j)
-  } filter {((i, j) => i != j)} map {
+  } filter {(i, j) => i != j} map {
     (i, j) => i * j
   }
 }*/
