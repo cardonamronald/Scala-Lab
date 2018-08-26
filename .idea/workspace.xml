@@ -3,51 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0c92d85b-e916-42bd-af92-14a83878d44f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/progfun/week2/Session1.sc" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/progfun/week2/Session1.sc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$106b9f8d14e94ac5f6c5$$anonfun$$sbtdef$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$106b9f8d14e94ac5f6c5$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$106b9f8d14e94ac5f6c5.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$106b9f8d14e94ac5f6c5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$205dceacd1b8309b3e88$$anonfun$$sbtdef$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$205dceacd1b8309b3e88$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$205dceacd1b8309b3e88.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$205dceacd1b8309b3e88.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$49a838ce3a87e037db64$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$49a838ce3a87e037db64.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$49a838ce3a87e037db64.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$56c18323c43c8867d2c5$$anonfun$$sbtdef$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$56c18323c43c8867d2c5$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$56c18323c43c8867d2c5.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$56c18323c43c8867d2c5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$77a7868b5bb4051d75be$$anonfun$$sbtdef$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$77a7868b5bb4051d75be$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$77a7868b5bb4051d75be.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/project/target/config-classes/$77a7868b5bb4051d75be.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/default/recfun-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/default/recfun-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/default/recfun-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/default/recfun-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-compile-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-compile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-docs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-docs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-optional.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-provided.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-runtime-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-runtime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-scala-tool.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-sources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-sources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-test-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/resolution-cache/reports/default-recfun-build-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/input_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/$global/update/$global/streams/update_cache_2.10/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/$global/update/$global/streams/update_cache_2.10/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/recfun/project/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/progfun/week2/Session2.sc" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/progfun/week2/Session2.sc" afterDir="false" />
     </list>
     <ignored path="SCALA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,34 +20,36 @@
     <session id="-2018951514">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="3" />
-          <entry key="project.open.time.8" value="3" />
+          <entry key="project.open.time.8" value="4" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitattributes" value="1" />
+          <entry key="iml" value="1" />
           <entry key="sbt" value="1" />
-          <entry key="sc" value="35" />
-          <entry key="scala" value="7" />
+          <entry key="sc" value="50" />
+          <entry key="scala" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="IDEA_MODULE" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Scala" value="42" />
+          <entry key="Scala" value="58" />
           <entry key="sbt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="sc" value="5866" />
+          <entry key="sc" value="7253" />
           <entry key="scala" value="450" />
           <entry key="txt" value="13" />
         </counts>
@@ -99,7 +57,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="13" />
-          <entry key="Scala" value="6316" />
+          <entry key="Scala" value="7703" />
         </counts>
       </usages-collector>
     </session>
@@ -111,38 +69,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sample Scripts/forComprehesion .sc">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Curso I/progfun/week2/Session2.sc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+            <state relative-caret-position="578">
+              <caret line="34" column="3" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Curso I/progfun/week2/Session1.sc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sample Scripts/ArgumentosImplicitos .sc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sample Scripts/For.sc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="18" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -165,7 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Curso II/DesignFun/Week4/BankAccountWithEventHandling/Subscriber.java" />
         <option value="$PROJECT_DIR$/Curso II/DesignFun/Week4/BankAccountWithEventHandling/Publisher.scala" />
         <option value="$PROJECT_DIR$/Curso II/DesignFun/Week4/BankAccountWithEventHandling/BankAccount.scala" />
         <option value="$PROJECT_DIR$/Curso II/DesignFun/Week4/BankAccountWithEventHandling/PublishSubscribe.scala" />
@@ -216,13 +155,14 @@
         <option value="$PROJECT_DIR$/Sample Scripts/For.sc" />
         <option value="$PROJECT_DIR$/Sample Scripts/forComprehesion .sc" />
         <option value="$PROJECT_DIR$/Curso I/progfun/week2/Session1.sc" />
+        <option value="$PROJECT_DIR$/Curso I/progfun/week2/Session2.sc" />
       </list>
     </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="797" />
@@ -249,6 +189,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -274,13 +217,15 @@
               <item name="progfun" type="462c0819:PsiDirectoryNode" />
               <item name="week2" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SCALA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SCALA" type="462c0819:PsiDirectoryNode" />
+              <item name="Sample Scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -568,14 +513,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" order="0" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.50486785" side_tool="true" weight="0.19640565" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.49513212" visible="true" weight="0.17453505" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.49513212" visible="true" weight="0.17668097" />
       <window_info id="Structure" order="5" weight="0.24962178" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" weight="0.24756606" />
@@ -629,49 +574,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Curso II/calculator/src/main/scala/calculator/Polynomial.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso II/calculator/src/main/scala/calculator/Calculator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso III/scalashop/src/main/scala/scalashop/HorizontalBoxBlur.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/example/src/main/scala/example/Lists.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sample Scripts/hello.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/forcomp/src/main/scala/forcomp/Anagrams.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="13" column="7" selection-end-line="185" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sample Scripts/Anagrams.scala" />
     <entry file="file://$PROJECT_DIR$/Sample Scripts/maps.sc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -704,13 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sample Scripts/forargs.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -761,13 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sample Scripts/for-yield.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -919,22 +807,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sample Scripts/For.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Curso I/recfun/build.sbt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sample Scripts/forComprehesion .sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sample Scripts/ArgumentosImplicitos .sc">
       <provider selected="true" editor-type-id="text-editor">
@@ -943,10 +817,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week2/Session4.sc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week2/Session3.sc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week1/week1.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sample Scripts/for-yield.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sample Scripts/forargs.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sample Scripts/forComprehesion .sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sample Scripts/For.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week1/Session3.sc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week1/Session2.sc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week1/Session1.sc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Curso I/progfun/week2/Session1.sc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="18" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week2/Session2.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="3" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
         </state>
       </provider>
     </entry>
