@@ -1,15 +1,19 @@
-val a = new Rationals(1,3)
-val b = new Rationals(5,7)
-val c = new Rationals(3,2)
+val x = new Rationals(1,3)
+val y = new Rationals(5,7)
+val z = new Rationals(3,2)
+x.sub(y).sub(z).toS
+y.add(y).toS
 
-a.sub(b).sub(c).toS
+
 class Rationals (x : Int, y : Int) {
 
   require(y != 0, "Denominator = 0")
 
   def this (x : Int) = this (x, 1) //Constructor secundario
-  def numer = x
-  def denom = y
+  private def g: Int = gcd(x, y)
+  def numer: Int = x / g
+  def denom: Int = y / g
+
 
   def add (s : Rationals) : Rationals = {
     new Rationals(numer * s.denom + s.numer * denom, denom * s.denom)
@@ -17,14 +21,17 @@ class Rationals (x : Int, y : Int) {
 
   def sub (s : Rationals) : Rationals = add(s.neg)
 
-  def neg : Rationals = new Rationals(numer * -1, denom)
+  def neg : Rationals = new Rationals(-numer, denom)
 
-  def toS = println(denom + '/' + numer)
+  def toS = println(denom + "/" + numer)
+
+  private def gcd(a: Int, b: Int): Int =
+    if(b == 0) a else gcd(b, a % b)
 }
 
 
 def makeString (x : Rationals) = {
-    x.numer + '/' + x.denom
+    x.numer + "/" + x.denom
   }
 
   def addRationals (r : Rationals, s : Rationals) : Rationals = {
