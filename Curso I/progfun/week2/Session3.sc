@@ -1,13 +1,14 @@
 val x = new Rationals(1,3)
 val y = new Rationals(5,7)
 val z = new Rationals(3,2)
-x.sub(y).sub(z).toS
-y.add(y).toS
-
+x.sub(y).sub(z)
+y.add(y)
+x.less(y)
+x.max(y)
 
 class Rationals (x : Int, y : Int) {
 
-  require(y != 0, "Denominator = 0")
+  require(y != 0, "Denominator must be non zero")
 
   def this (x : Int) = this (x, 1) //Constructor secundario
   private def g: Int = gcd(x, y)
@@ -23,7 +24,11 @@ class Rationals (x : Int, y : Int) {
 
   def neg : Rationals = new Rationals(-numer, denom)
 
-  def toS = println(denom + "/" + numer)
+  def less(that: Rationals): Boolean = this.numer * that.denom < this.denom * that.numer
+
+  def max(that: Rationals): Rationals = if (this.less(that)) that else this
+
+  override def toString: String = denom + "/" + numer
 
   private def gcd(a: Int, b: Int): Int =
     if(b == 0) a else gcd(b, a % b)
