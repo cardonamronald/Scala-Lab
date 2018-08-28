@@ -36,25 +36,25 @@ class Rationals (x : Int, y : Int) {
 
 
 def makeString (x : Rationals) = {
-    x.numer + "/" + x.denom
-  }
+  x.numer + "/" + x.denom
+}
 
-  def addRationals (r : Rationals, s : Rationals) : Rationals = {
-    new Rationals((r.numer * s.denom) + (s.numer * r.denom), r.denom * s.denom)
-  }
+def addRationals (r : Rationals, s : Rationals) : Rationals = {
+  new Rationals((r.numer * s.denom) + (s.numer * r.denom), r.denom * s.denom)
+}
 
-  def subRationals (r : Rationals, s : Rationals) : Rationals = {
-    new Rationals((r.numer * s.denom) - (s.numer * r.denom), r.denom * s.denom)
-  }
+def subRationals (r : Rationals, s : Rationals) : Rationals = {
+  new Rationals((r.numer * s.denom) - (s.numer * r.denom), r.denom * s.denom)
+}
 
-  def timesRationals (r : Rationals, s : Rationals) : Rationals = {
-    new Rationals(r.numer * s.numer, r.denom * s.denom)
-  }
+def timesRationals (r : Rationals, s : Rationals) : Rationals = {
+  new Rationals(r.numer * s.numer, r.denom * s.denom)
+}
 
-  def divRationals (r : Rationals, s : Rationals) : Rationals = {
-    new Rationals(r.numer * s.denom, r.denom * s.numer)
-  }
+def divRationals (r : Rationals, s : Rationals) : Rationals = {
+  new Rationals(r.numer * s.denom, r.denom * s.numer)
+}
 
-  def compRationals (r : Rationals, s : Rationals) : Boolean = {
-    r.numer * s.denom == r.denom * s.numer
-  }
+def compRationals (r : Rationals, s : Rationals) : Boolean = {
+  r.numer * s.denom == r.denom * s.numer
+}
