@@ -27,7 +27,7 @@ def fixedPoint(f: Double => Double)(firstGuess: Double):Double = {
   iterate(firstGuess)
 }
 fixedPoint(x => -math.sqrt((x * math.exp(x)) - (5 * x) - 3)) (-4.5)
-fixedPoint(x => math.log(x + 2))(1)
+fixedPoint(x => x*x-4)(2)
 //Teorema del intervalo cerrado
 
 
@@ -49,5 +49,7 @@ sqrt(81)
 
 
 def newton(f: Double => Double)(firstGuess: Double): Double = {
-  fixedPoint(x => f()) (firstGuess)
+  fixedPoint(f) (firstGuess)
 }
+
+newton(x => x - (((x*math.exp(x)) - math.pow(x, 2) - 5*x - 3)/((x*math.exp(x)) - math.exp(x) - (2*x) - 5)))(1)

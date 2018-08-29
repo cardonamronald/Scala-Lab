@@ -38,5 +38,3 @@ object Empty extends IntSet {
   def incl(x: Int): IntSet = new NonEmpty(x, Empty, Empty)
   def union (other: IntSet) : IntSet = Empty
 }
-
-
