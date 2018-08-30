@@ -26,18 +26,20 @@ def fixedPoint(f: Double => Double)(firstGuess: Double):Double = {
   }
   iterate(firstGuess)
 }
+
 fixedPoint(x => -math.sqrt((x * math.exp(x)) - (5 * x) - 3)) (-4.5)
 fixedPoint(x => x*x-4)(2)
+
+def newton(f: Double => Double)(firstGuess: Double): Double =
+  fixedPoint(f) (firstGuess)
+
 //Teorema del intervalo cerrado
-
-
-
-print("-----------------------------------------------------------------")
 
 def sqrt(x: Double): Double = fixedPoint(averageDamp(y => x / y))(1)
 
 //AverageDamp is a function that receives a function and returns another function
 def averageDamp(f: Double => Double)(x: Double) = (x + f(x)) / 2
+print("-----------------------------------------------------------------")
 
 sqrt(81)
 
@@ -48,8 +50,5 @@ sqrt(81)
 //xn = xn-1 - f(xn-1)/ f'(xn-1)
 
 
-def newton(f: Double => Double)(firstGuess: Double): Double = {
-  fixedPoint(f) (firstGuess)
-}
 
 newton(x => x - (((x*math.exp(x)) - math.pow(x, 2) - 5*x - 3)/((x*math.exp(x)) - math.exp(x) - (2*x) - 5)))(1)
