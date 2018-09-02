@@ -77,6 +77,8 @@ class FunSetSuite extends FunSuite {
     val s1 = singletonSet(1)
     val s2 = singletonSet(2)
     val s3 = singletonSet(3)
+    val s4 = squareSet(2)
+    val s5 = singletonSet(4)
   }
 
   /**
@@ -110,5 +112,23 @@ class FunSetSuite extends FunSuite {
     }
   }
 
+  test("Forall ") {
+    new TestSets {
+      assert(forall(s4, x => x % 2 == 0) == true)
+      assert(exists(s4, x => x % 2 == 0) == false)
+    }
+  }
 
+  test("Exists") {
+    new TestSets {
+      assert(exists(s4, x => x % 3 == 0) == false)
+      assert(exists(s1, x => x == 1) == true)
+    }
+  }
+
+  test("Map") {
+    new TestSets {
+      printSet(map(union(s1, union(s2, union(s3, s5))), x => x * x))
+    }
+  }
 }

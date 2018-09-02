@@ -2,9 +2,180 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c92d85b-e916-42bd-af92-14a83878d44f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/NumericalAnalysis/Biseccion.sc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NumericalAnalysis/busquedaIncremental.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$250fb079dede96a629f9$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$250fb079dede96a629f9.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$250fb079dede96a629f9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$29aed93267e007f2e4b0$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$29aed93267e007f2e4b0$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$29aed93267e007f2e4b0.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$29aed93267e007f2e4b0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$6e9a83167e5e47e39911$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$6e9a83167e5e47e39911$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$6e9a83167e5e47e39911.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$6e9a83167e5e47e39911.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$a718702461bcb49aaf51$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$a718702461bcb49aaf51$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$a718702461bcb49aaf51.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$a718702461bcb49aaf51.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$f300959525d7c822f2c7$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$f300959525d7c822f2c7$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$f300959525d7c822f2c7.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/project/target/config-classes/$f300959525d7c822f2c7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$0ce1c1404c7b64c1ec5a$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$0ce1c1404c7b64c1ec5a$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$0ce1c1404c7b64c1ec5a.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$0ce1c1404c7b64c1ec5a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$19b4e4835dd7f4e3f1b1$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$19b4e4835dd7f4e3f1b1$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$19b4e4835dd7f4e3f1b1.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$19b4e4835dd7f4e3f1b1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$323c282bc4e397397563$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$323c282bc4e397397563$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$323c282bc4e397397563.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$323c282bc4e397397563.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$36dfa0133be536f9358e$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$36dfa0133be536f9358e$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$36dfa0133be536f9358e.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$36dfa0133be536f9358e.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$3e0528abbf7a0676c882$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$3e0528abbf7a0676c882$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$3e0528abbf7a0676c882.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$3e0528abbf7a0676c882.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$84e3fa34819a75ace6f4$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$84e3fa34819a75ace6f4$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$84e3fa34819a75ace6f4.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$84e3fa34819a75ace6f4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$9889e4d8f92e53389e6b$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$9889e4d8f92e53389e6b$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$9889e4d8f92e53389e6b.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$9889e4d8f92e53389e6b.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$aea5133a3c324cf8a158$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$aea5133a3c324cf8a158$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$aea5133a3c324cf8a158.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$aea5133a3c324cf8a158.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$f5eac74a655053b0c813$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$f5eac74a655053b0c813$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$f5eac74a655053b0c813.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$f5eac74a655053b0c813.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$fd44e16c5498eef1eb0d$$anonfun$$sbtdef$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$fd44e16c5498eef1eb0d$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$fd44e16c5498eef1eb0d.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/config-classes/$fd44e16c5498eef1eb0d.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/default/funsets-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/default/funsets-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/default/funsets-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/default/funsets-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-docs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-docs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-sources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-sources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/resolution-cache/reports/default-funsets-build-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/scala-2.10/sbt-0.13/classes/StudentBuildLike.class" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/scala-2.10/sbt-0.13/classes/StudentBuildLike.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/input_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/$global/update/$global/streams/update_cache_2.10/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/$global/update/$global/streams/update_cache_2.10/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/copyResources/$global/streams/copy-resources" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/copyResources/$global/streams/copy-resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.10" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.10" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/project/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/src/main/scala/funsets/FunSets.scala" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/src/main/scala/funsets/FunSets.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/src/test/scala/funsets/FunSetSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/src/test/scala/funsets/FunSetSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/.history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/progfun1-funsets/progfun1-funsets$sources_2.11/0.1-SNAPSHOT/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/progfun1-funsets/progfun1-funsets$sources_2.11/0.1-SNAPSHOT/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/progfun1-funsets/progfun1-funsets_2.11/0.1-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/progfun1-funsets/progfun1-funsets_2.11/0.1-SNAPSHOT/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/progfun1-funsets/progfun1-funsets_2.11/0.1-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/progfun1-funsets/progfun1-funsets_2.11/0.1-SNAPSHOT/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-compile-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-compile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-docs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-optional.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-provided.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-runtime-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-scala-tool.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-test-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets$sources_2.11-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-docs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-docs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-sources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-sources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/resolution-cache/reports/progfun1-funsets-progfun1-funsets_2.11-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/classes/funsets/FunSets$.class" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/classes/funsets/FunSets$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/progfun1-funsets_2.11-0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite$$anonfun$3$$anon$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite$$anonfun$3$$anon$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite$$anonfun$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite$$anonfun$4$$anon$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite$$anonfun$4$$anon$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite$$anonfun$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite$$anonfun$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite$TestSets$class.class" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite$TestSets$class.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite$TestSets.class" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite$TestSets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/scala-2.11/test-classes/funsets/FunSetSuite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/$global/$global/dumpStructure/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/$global/submit/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/$global/update/$global/streams/update_cache_2.11/output" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/$global/update/$global/streams/update_cache_2.11/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.11" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/packageSubmission/$global/streams/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/packageSubmission/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/compile/packageSubmission/$global/streams/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/runtime/unmanagedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/compileIncremental/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/definedTests/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/definedTests/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/fullClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/incCompileSetup/$global/streams/inc_compile_2.11" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/incCompileSetup/$global/streams/inc_compile_2.11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/internalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/test/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/test/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/test/$global/streams/succeeded_tests" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/test/$global/streams/succeeded_tests" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/test/isModule=false name=funsets.FunSetSuite/test/out" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/streams/test/test/isModule=false name=funsets.FunSetSuite/test/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/funsets/target/test-reports/funsets.FunSetSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/funsets/target/test-reports/funsets.FunSetSuite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curso I/progfun/week3/Session3.sc" beforeDir="false" afterPath="$PROJECT_DIR$/Curso I/progfun/week3/Session3.sc" afterDir="false" />
     </list>
     <ignored path="SCALA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,16 +192,16 @@
     <session id="-2018951514">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="8" />
-          <entry key="project.open.time.8" value="5" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.open.time.8" value="6" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -38,29 +209,29 @@
           <entry key="gitattributes" value="1" />
           <entry key="iml" value="2" />
           <entry key="sbt" value="1" />
-          <entry key="sc" value="114" />
-          <entry key="scala" value="28" />
+          <entry key="sc" value="117" />
+          <entry key="scala" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Scala" value="142" />
+          <entry key="Scala" value="147" />
           <entry key="sbt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="sc" value="12677" />
-          <entry key="scala" value="523" />
+          <entry key="scala" value="1058" />
           <entry key="txt" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="13" />
-          <entry key="Scala" value="13200" />
+          <entry key="Scala" value="13735" />
         </counts>
       </usages-collector>
     </session>
@@ -73,37 +244,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sample Scripts/TipoDeDatoAlgebraico.sc">
+        <entry file="file://$PROJECT_DIR$/Curso I/funsets/src/main/scala/funsets/FunSets.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="405">
+              <caret line="78" column="62" selection-start-line="78" selection-start-column="62" selection-end-line="78" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NumericalAnalysis/IncrementalSearch.sc">
+        <entry file="file://$PROJECT_DIR$/Curso I/funsets/src/test/scala/funsets/FunSetSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NumericalAnalysis/Biseccion.sc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NumericalAnalysis/fixedPoints.sc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="53" column="110" selection-start-line="53" selection-start-column="110" selection-end-line="53" selection-end-column="110" />
+            <state relative-caret-position="633">
+              <caret line="130" column="68" selection-start-line="130" selection-start-column="68" selection-end-line="130" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -126,7 +279,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Sample Scripts/maps.sc" />
         <option value="$PROJECT_DIR$/Sample Scripts/printargs.scala" />
         <option value="$PROJECT_DIR$/Sample Scripts/echoargs.scala" />
         <option value="$PROJECT_DIR$/Sample Scripts/pa.scala" />
@@ -143,7 +295,6 @@
         <option value="$PROJECT_DIR$/NumericalAnalysis/Series.sc" />
         <option value="$PROJECT_DIR$/NumericalAnalysis/order.sc" />
         <option value="$PROJECT_DIR$/NumericalAnalysis/sumaBajoUno.sc" />
-        <option value="$PROJECT_DIR$/Curso I/funsets/src/main/scala/funsets/FunSets.scala" />
         <option value="$PROJECT_DIR$/Curso I/patmat/src/main/scala/patmat/Huffman.scala" />
         <option value="$PROJECT_DIR$/ClassesAndObjects/Classes.sc" />
         <option value="$PROJECT_DIR$/ClassesAndObjects/SingletonObjects.sc" />
@@ -165,7 +316,6 @@
         <option value="$PROJECT_DIR$/ClassesAndObjects/Rationals.sc" />
         <option value="$PROJECT_DIR$/Sample Scripts/ControlStructures.sc" />
         <option value="$PROJECT_DIR$/Curso I/progfun/week3/Session1.sc" />
-        <option value="$PROJECT_DIR$/Curso I/progfun/week3/Session3.sc" />
         <option value="$PROJECT_DIR$/Curso I/progfun/week3/program.sc" />
         <option value="$PROJECT_DIR$/Curso I/progfun/week3/program.scala" />
         <option value="$PROJECT_DIR$/Curso I/progfun/week2/Rationals.scala" />
@@ -177,6 +327,9 @@
         <option value="$PROJECT_DIR$/NumericalAnalysis/busquedaIncremental.sc" />
         <option value="$PROJECT_DIR$/NumericalAnalysis/Biseccion.sc" />
         <option value="$PROJECT_DIR$/NumericalAnalysis/IncrementalSearch.sc" />
+        <option value="$PROJECT_DIR$/Curso I/progfun/week3/Session3.sc" />
+        <option value="$PROJECT_DIR$/Curso I/funsets/src/main/scala/funsets/FunSets.scala" />
+        <option value="$PROJECT_DIR$/Curso I/funsets/src/test/scala/funsets/FunSetSuite.scala" />
       </list>
     </option>
   </component>
@@ -209,9 +362,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,17 +372,82 @@
             <path>
               <item name="SCALA" type="b2602c69:ProjectViewProjectNode" />
               <item name="SCALA" type="462c0819:PsiDirectoryNode" />
-              <item name="NumericalAnalysis" type="462c0819:PsiDirectoryNode" />
+              <item name="Curso I" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SCALA" type="b2602c69:ProjectViewProjectNode" />
               <item name="SCALA" type="462c0819:PsiDirectoryNode" />
-              <item name="Sample Scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="Curso I" type="462c0819:PsiDirectoryNode" />
+              <item name="funsets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SCALA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SCALA" type="462c0819:PsiDirectoryNode" />
+              <item name="Curso I" type="462c0819:PsiDirectoryNode" />
+              <item name="funsets" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SCALA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SCALA" type="462c0819:PsiDirectoryNode" />
+              <item name="Curso I" type="462c0819:PsiDirectoryNode" />
+              <item name="funsets" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SCALA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SCALA" type="462c0819:PsiDirectoryNode" />
+              <item name="Curso I" type="462c0819:PsiDirectoryNode" />
+              <item name="funsets" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SCALA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SCALA" type="462c0819:PsiDirectoryNode" />
+              <item name="Curso I" type="462c0819:PsiDirectoryNode" />
+              <item name="funsets" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="funsets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SCALA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SCALA" type="462c0819:PsiDirectoryNode" />
+              <item name="Curso I" type="462c0819:PsiDirectoryNode" />
+              <item name="funsets" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SCALA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SCALA" type="462c0819:PsiDirectoryNode" />
+              <item name="Curso I" type="462c0819:PsiDirectoryNode" />
+              <item name="funsets" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SCALA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SCALA" type="462c0819:PsiDirectoryNode" />
+              <item name="Curso I" type="462c0819:PsiDirectoryNode" />
+              <item name="funsets" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="funsets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -240,7 +455,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535769042037" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="Scala Compiler" />
+    <property name="settings.editor.selected.configurable" value="sbt.project.settings.configurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -527,7 +742,7 @@
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.50486785" side_tool="true" weight="0.19640565" />
-      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.49513212" visible="true" weight="0.25107297" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.49513212" visible="true" weight="0.22246066" />
       <window_info id="Structure" order="5" weight="0.24962178" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" weight="0.24756606" />
@@ -608,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/funsets/src/test/scala/funsets/FunSetSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="103" column="51" lean-forward="true" selection-start-line="103" selection-start-column="51" selection-end-line="103" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Curso I/progfun/week2/Session4.sc" />
     <entry file="file://$PROJECT_DIR$/ClassesAndObjects/ChecksumAccumulator.scala">
       <provider selected="true" editor-type-id="text-editor">
@@ -627,13 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/funsets/src/main/scala/funsets/FunSets.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -695,20 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week3/Session3.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week3/trait.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -824,20 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sample Scripts/TipoDeDatoAlgebraico.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NumericalAnalysis/fixedPoints.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="110" selection-start-line="53" selection-start-column="110" selection-end-line="53" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NumericalAnalysis/Biseccion.sc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -849,6 +1022,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sample Scripts/TipoDeDatoAlgebraico.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week3/Session3.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/progfun/week3/trait.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NumericalAnalysis/fixedPoints.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/funsets/src/main/scala/funsets/FunSets.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="78" column="62" selection-start-line="78" selection-start-column="62" selection-end-line="78" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curso I/funsets/src/test/scala/funsets/FunSetSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="130" column="68" selection-start-line="130" selection-start-column="68" selection-end-line="130" selection-end-column="68" />
         </state>
       </provider>
     </entry>
