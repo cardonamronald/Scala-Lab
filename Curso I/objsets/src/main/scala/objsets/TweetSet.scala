@@ -1,7 +1,6 @@
 package objsets
 
 import TweetReader.allTweets
-
 /**
  * A class to represent tweets.
  */
@@ -113,7 +112,7 @@ class Empty extends TweetSet {
 
   def union(that: TweetSet): TweetSet = that
 
-  def mostRetweeted: Tweet = new Tweet(" ", " ", 0)
+  def mostRetweeted: Tweet = throw new java.util.NoSuchElementException()
 
   def descendingByRetweet: TweetList = Nil
 
@@ -135,12 +134,12 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
 
   //Problemas en la funcion filter y filterAcc de NonEmpty
     def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet = {
-      foreach(elem => if (p(elem)) acc.incl(elem))
-      acc
+      if (p(elem)) left.filterAcc(p, right.filterAcc(p, acc.incl(elem)))
+      else left.filterAcc(p, right.filterAcc(p, acc))
     }
 
     def filter(p: Tweet => Boolean): TweetSet = {
-      filterAcc(p, new NonEmpty(elem, new Empty, new Empty))
+      filterAcc(p, new Empty)
     }
 
     def union(that: TweetSet): TweetSet = {

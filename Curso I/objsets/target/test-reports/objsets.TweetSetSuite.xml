@@ -1,22 +1,45 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuite hostname="Satellite" name="objsets.TweetSetSuite" tests="7" errors="0" failures="1" time="0.07">
+<testsuite hostname="Ronalds-MacBook-Pro.local" name="objsets.TweetSetSuite" tests="8" errors="0" failures="1" time="0.019">
                      <properties>
-      <property name="jline.esc.timeout" value="0"/><property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/><property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jre1.8.0_111\bin"/><property name="java.vm.version" value="25.111-b14"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="java.vendor.url" value="http://java.oracle.com/"/><property name="path.separator" value=";"/><property name="java.vm.name" value="Java HotSpot(TM) Client VM"/><property name="file.encoding.pkg" value="sun.io"/><property name="user.country" value="MX"/><property name="user.script" value=""/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="sun.os.patch.level" value=""/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="user.dir" value="C:\Users\RONALD\Documents\EAFIT\2017-1\SCALA\SCALA\objsets"/><property name="java.runtime.version" value="1.8.0_111-b14"/><property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/><property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jre1.8.0_111\lib\endorsed"/><property name="os.arch" value="x86"/><property name="java.io.tmpdir" value="C:\Users\RONALD\AppData\Local\Temp\"/><property name="line.separator" value="
-"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="user.variant" value=""/><property name="os.name" value="Windows 10"/><property name="sun.jnu.encoding" value="Cp1252"/><property name="java.library.path" value="C:\ProgramData\Oracle\Java\javapath;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Java\jre1.8.0_91\bin;C:\Program Files\Haskell\bin;C:\Program Files\Haskell Platform\8.0.1\lib\extralibs\bin;C:\Program Files\Haskell Platform\8.0.1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Haskell Platform\8.0.1\mingw\bin;C:\Program Files\OpenVPN\bin;C:\Program Files (x86)\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\sbt\bin;C:\Users\RONALD\AppData\Roaming\cabal\bin;C:\Users\RONALD\AppData\Roaming\local\bin;C:\Users\RONALD\AppData\Local\atom\bin;."/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.class.version" value="52.0"/><property name="sun.management.compiler" value="HotSpot Client Compiler"/><property name="os.version" value="10.0"/><property name="user.home" value="C:\Users\RONALD"/><property name="user.timezone" value="America/Bogota"/><property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/><property name="file.encoding" value="Cp1252"/><property name="java.specification.version" value="1.8"/><property name="sbt.log.format" value="true"/><property name="java.class.path" value="C:\Program Files (x86)\sbt\bin\sbt-launch.jar"/><property name="user.name" value="RONALD"/><property name="jline.shutdownhook" value="false"/><property name="java.vm.specification.version" value="1.8"/><property name="sun.java.command" value="xsbt.boot.Boot"/><property name="java.home" value="C:\Program Files (x86)\Java\jre1.8.0_111"/><property name="sun.arch.data.model" value="32"/><property name="user.language" value="es"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="awt.toolkit" value="sun.awt.windows.WToolkit"/><property name="java.vm.info" value="mixed mode"/><property name="java.version" value="1.8.0_111"/><property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jre1.8.0_111\lib\ext;C:\Windows\Sun\Java\lib\ext"/><property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jre1.8.0_111\lib\resources.jar;C:\Program Files (x86)\Java\jre1.8.0_111\lib\rt.jar;C:\Program Files (x86)\Java\jre1.8.0_111\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre1.8.0_111\lib\jsse.jar;C:\Program Files (x86)\Java\jre1.8.0_111\lib\jce.jar;C:\Program Files (x86)\Java\jre1.8.0_111\lib\charsets.jar;C:\Program Files (x86)\Java\jre1.8.0_111\lib\jfr.jar;C:\Program Files (x86)\Java\jre1.8.0_111\classes"/><property name="java.vendor" value="Oracle Corporation"/><property name="sun.stderr.encoding" value="cp850"/><property name="file.separator" value="\"/><property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.cpu.endian" value="little"/><property name="sun.stdout.encoding" value="cp850"/><property name="sun.desktop" value="windows"/><property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+      <property name="jline.esc.timeout" value="0"/><property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/><property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib"/><property name="java.vm.version" value="25.181-b13"/><property name="gopherProxySet" value="false"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="java.vendor.url" value="http://java.oracle.com/"/><property name="path.separator" value=":"/><property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/><property name="file.encoding.pkg" value="sun.io"/><property name="user.country" value="CO"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="sun.os.patch.level" value="unknown"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="user.dir" value="/Users/ronald/Documents/SCALA/Curso I/objsets"/><property name="java.runtime.version" value="1.8.0_181-b13"/><property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/><property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/endorsed"/><property name="os.arch" value="x86_64"/><property name="java.io.tmpdir" value="/var/folders/6p/n5hg8bbj3gddwxy5pwf8fyg80000gn/T/"/><property name="line.separator" value="
+"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="os.name" value="Mac OS X"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="java.library.path" value="/Users/ronald/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.class.version" value="52.0"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="os.version" value="10.13.4"/><property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="user.home" value="/Users/ronald"/><property name="user.timezone" value="America/Bogota"/><property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/><property name="file.encoding" value="UTF-8"/><property name="java.specification.version" value="1.8"/><property name="java.class.path" value="/usr/local/Cellar/sbt/1.2.1/libexec/bin/sbt-launch.jar"/><property name="user.name" value="ronald"/><property name="jline.shutdownhook" value="false"/><property name="java.vm.specification.version" value="1.8"/><property name="sun.java.command" value="/usr/local/Cellar/sbt/1.2.1/libexec/bin/sbt-launch.jar"/><property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre"/><property name="sun.arch.data.model" value="64"/><property name="user.language" value="en"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/><property name="java.vm.info" value="mixed mode"/><property name="java.version" value="1.8.0_181"/><property name="java.ext.dirs" value="/Users/ronald/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/><property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/classes"/><property name="java.vendor" value="Oracle Corporation"/><property name="file.separator" value="/"/><property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/><property name="sun.io.unicode.encoding" value="UnicodeBig"/><property name="sun.cpu.endian" value="little"/><property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="sun.cpu.isalist" value=""/>
     </properties>
-                     <testcase classname="objsets.TweetSetSuite" name="filter: on empty set" time="0.027">
+                     <testcase classname="objsets.TweetSetSuite" name="filter: on empty set" time="0.013">
                                                  
-                                               </testcase><testcase classname="objsets.TweetSetSuite" name="filter: a on set5" time="0.009">
+                                               </testcase><testcase classname="objsets.TweetSetSuite" name="union: on empty set" time="0.001">
                                                  
-                                               </testcase><testcase classname="objsets.TweetSetSuite" name="filter: 20 on set5" time="0.021">
-                                                 <failure message="1 did not equal 2" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: 1 did not equal 2
-	at org.scalatest.Assertions$class.newAssertionFailedException(Assertions.scala:500)
-	at org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1555)
-	at org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:466)
-	at objsets.TweetSetSuite$$anonfun$3$$anon$3.&lt;init&gt;(TweetSetSuite.scala:44)
-	at objsets.TweetSetSuite$$anonfun$3.apply$mcV$sp(TweetSetSuite.scala:43)
-	at objsets.TweetSetSuite$$anonfun$3.apply(TweetSetSuite.scala:43)
-	at objsets.TweetSetSuite$$anonfun$3.apply(TweetSetSuite.scala:43)
+                                               </testcase><testcase classname="objsets.TweetSetSuite" name="filter: a on set5" time="0.001">
+                                                 
+                                               </testcase><testcase classname="objsets.TweetSetSuite" name="filter: 20 on set5" time="0.001">
+                                                 
+                                               </testcase><testcase classname="objsets.TweetSetSuite" name="union: set4c and set4d" time="0.0">
+                                                 
+                                               </testcase><testcase classname="objsets.TweetSetSuite" name="union: with empty set (1)" time="0.0">
+                                                 
+                                               </testcase><testcase classname="objsets.TweetSetSuite" name="union: with empty set (2)" time="0.001">
+                                                 
+                                               </testcase><testcase classname="objsets.TweetSetSuite" name="descending: set5" time="0.002">
+                                                 <failure type="java.util.NoSuchElementException">java.util.NoSuchElementException
+	at objsets.Empty.mostRetweeted(TweetSet.scala:115)
+	at objsets.NonEmpty.r$1(TweetSet.scala:152)
+	at objsets.NonEmpty.a$1(TweetSet.scala:155)
+	at objsets.NonEmpty.mostRetweeted(TweetSet.scala:158)
+	at objsets.NonEmpty.r$1(TweetSet.scala:152)
+	at objsets.NonEmpty.a$1(TweetSet.scala:155)
+	at objsets.NonEmpty.mostRetweeted(TweetSet.scala:158)
+	at objsets.NonEmpty.r$1(TweetSet.scala:152)
+	at objsets.NonEmpty.a$1(TweetSet.scala:155)
+	at objsets.NonEmpty.mostRetweeted(TweetSet.scala:158)
+	at objsets.NonEmpty.r$1(TweetSet.scala:152)
+	at objsets.NonEmpty.a$1(TweetSet.scala:155)
+	at objsets.NonEmpty.mostRetweeted(TweetSet.scala:158)
+	at objsets.NonEmpty$$anon$1.head(TweetSet.scala:165)
+	at objsets.NonEmpty$$anon$1.&lt;init&gt;(TweetSet.scala:171)
+	at objsets.NonEmpty.descendingByRetweet(TweetSet.scala:163)
+	at objsets.TweetSetSuite$$anonfun$8$$anon$8.&lt;init&gt;(TweetSetSuite.scala:83)
+	at objsets.TweetSetSuite$$anonfun$8.apply$mcV$sp(TweetSetSuite.scala:82)
+	at objsets.TweetSetSuite$$anonfun$8.apply(TweetSetSuite.scala:82)
+	at objsets.TweetSetSuite$$anonfun$8.apply(TweetSetSuite.scala:82)
 	at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)
 	at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)
 	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
@@ -71,21 +94,13 @@
 	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
 	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="objsets.TweetSetSuite" name="union: set4c and set4d" time="0.002">
-                                                 
-                                               </testcase><testcase classname="objsets.TweetSetSuite" name="union: with empty set (1)" time="0.002">
-                                                 
-                                               </testcase><testcase classname="objsets.TweetSetSuite" name="union: with empty set (2)" time="0.002">
-                                                 
-                                               </testcase><testcase classname="objsets.TweetSetSuite" name="descending: set5" time="0.007">
-                                                 
                                                </testcase>
                      <system-out></system-out>
                      <system-err></system-err>
