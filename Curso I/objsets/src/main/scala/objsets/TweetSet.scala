@@ -103,6 +103,8 @@ abstract class TweetSet {
    * This method takes a function and applies it to every element in the set.
    */
   def foreach(f: Tweet => Unit): Unit
+
+  def isEmpty: Boolean
 }
 
 class Empty extends TweetSet {
@@ -127,6 +129,8 @@ class Empty extends TweetSet {
   def remove(tweet: Tweet): TweetSet = this
 
   def foreach(f: Tweet => Unit): Unit = ()
+
+  def isEmpty = true
 }
 
 class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
@@ -149,15 +153,14 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
     }
 
     def mostRetweeted : Tweet = {
-      def r = right.mostRetweeted
-      def l = left.mostRetweeted
-
-      def a = r.retweets
-      def b = l.retweets
-      def c = elem.retweets
-      if (a > b) {
-        if (a > c) r else elem
-      } else if (b > c) l else elem
+      if (left.isEmpty && right.isEmpty) elem
+      else if (left.isEmpty && !right.isEmpty) if (elem.retweets > right.mostRetweeted.retweets) elem else right.mostRetweeted
+      else if (!left.isEmpty && right.isEmpty) if (elem.retweets > left.mostRetweeted.retweets) elem else left.mostRetweeted
+      else {
+        val a = if (left.mostRetweeted.retweets > right.mostRetweeted.retweets) left.mostRetweeted
+                else right.mostRetweeted
+        if (a.retweets > elem.retweets) a else elem
+      }
     }
 
     def descendingByRetweet: TweetList = new TweetList {
@@ -196,6 +199,8 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
     left.foreach(f)
     right.foreach(f)
   }
+
+  def isEmpty = false
 }
 
 trait TweetList {

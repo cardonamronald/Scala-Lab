@@ -21,3 +21,9 @@ exit
 console
 test
 exit
+test
+sbt clean
+clean
+test
+clean
+exit
