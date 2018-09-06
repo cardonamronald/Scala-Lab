@@ -34,5 +34,3 @@ object List {
   def apply[T]  (x1 : T): List[T] = new Cons[T](x1, new Nil[T])
   def apply [T] (x1 : T, x2 : T) : List[T] = new Cons[T](x1, new Cons[T](x2, new Nil[T]))
 }
-
-

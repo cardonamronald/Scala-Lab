@@ -27,3 +27,6 @@ clean
 test
 clean
 exit
+run 
+test 
+run 
