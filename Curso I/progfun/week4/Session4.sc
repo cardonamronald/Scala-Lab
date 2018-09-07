@@ -4,8 +4,9 @@ trait List [+T] {
   def isEmpty : Boolean
   def head : T
   def tail : List[T]
+  def prepend[U >: T] (elem: U): List[U] = new Cons(elem, this)
 
-  def prepend[U >: T](elem: U): List[U] = new Cons(elem, this)
+  //def prepend[U >: T](elem: U): List[U] = new Cons(elem, this)
 }
 
 class Cons [T] (val head : T, val tail : List[T]) extends List[T] {
@@ -38,5 +39,3 @@ object List {
   def apply[T]  (x1 : T): List[T] = new Cons[T](x1, Nil)
   def apply [T] (x1 : T, x2 : T) : List[T] = new Cons[T](x1, new Cons[T](x2, Nil))
 }
-
-
