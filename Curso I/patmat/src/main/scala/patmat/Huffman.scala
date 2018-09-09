@@ -176,26 +176,20 @@ object Huffman {
    * This function decodes the bit sequence `bits` using the code tree `tree` and returns
    * the resulting list of characters.
    */
-    def decode(tree: CodeTree, bits: List[Bit]): List[Char] =  {
-    /*case List() => List()
-    case x :: xs => descifrar(tree, bits)
-  */
-
-    val root = tree
-
-    def iter(tree: CodeTree, bits: List[Bit], acum: List[Char]): List[Char] = tree match {
-      case Leaf(char, weight) => if (bits == Nil) char :: acum else iter(root, bits, char :: acum)
-      case Fork(left, right, chars, weight) => iter(if (bits.head == 0) left else right, bits.tail, acum)
+    def decode(tree: CodeTree, bits: List[Bit]): List[Char] = {
+      val root = tree
+      def aux(tree: CodeTree, bits: List[Bit], acum: List[Char]): List[Char] = tree match {
+          case Leaf(char, weight) => if (bits == Nil) char :: acum else aux(root, bits, char :: acum) //Backtrack, no bit wasted
+          case Fork(left, right, chars, weight) => {
+            if (bits == Nil) acum else bits.head match {
+              case 0 => aux(left, bits.tail, acum)
+              case 1 => aux(right, bits.tail, acum)
+              case _ => acum
+            }
+          }
+      }
+      aux(tree, bits, List()).reverse
     }
-    iter(root, bits, List()).reverse
-  }
-
-  def descifrar (tree : CodeTree, bits : List[Bit]) : List[Char] = tree match {
-    case Leaf (char, _) => List(char)
-    case Fork (left, right, chars, _) => if (bits.nonEmpty) {
-      chars ::: descifrar(if (bits.head == 0) left else right, bits.tail)
-      } else chars
-  }
 
   /**
    * A Huffman coding tree for the French language.

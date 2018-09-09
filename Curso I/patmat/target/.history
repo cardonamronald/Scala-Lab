@@ -113,3 +113,9 @@ exit
 test
 clean
 exit
+test
+est
+test
+sbt clean
+clean
+exit

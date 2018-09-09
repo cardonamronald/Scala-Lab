@@ -51,6 +51,12 @@ class HuffmanSuite extends FunSuite {
     }
   }
 
+  test("decodedSecret") {
+    new TestTrees {
+      assert(decodedSecret == List('h', 'u', 'f', 'f', 'm', 'a', 'n', 'e', 's', 't', 'c', 'o', 'o', 'l'))
+    }
+  }
+
   test("Times of a list") {
     assert(times(List('a', 'b', 'b', 'a')) == List(('a', 2), ('b', 2)))
   }
