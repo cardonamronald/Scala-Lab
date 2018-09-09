@@ -31,7 +31,7 @@ object Huffman {
       case Fork(l, r, list, peso) => chars(l) ::: chars(r)
     }
 
-  def makeCodeTree(left: CodeTree, right: CodeTree) =
+  def makeCodeTree(left: CodeTree, right: CodeTree): CodeTree =
     Fork(left, right, chars(left) ::: chars(right), weight(left) + weight(right))
 
   // Part 2: Generating Huffman trees
@@ -91,9 +91,9 @@ object Huffman {
    */
 
   def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = {
-    freqs.map {
-      case (c, i) => Leaf(c, i)
-    }.distinct.sortWith((l1: Leaf, l2: Leaf) => l1.weight < l2.weight)
+    freqs.map(x => Leaf(x._1, x._2))
+      .distinct
+      .sortWith((l1, l2) => l1.weight < l2.weight)
   }
 
   /**
@@ -113,8 +113,12 @@ object Huffman {
    * If `trees` is a list of less than two elements, that list should be returned
    * unchanged.
    */
-    def combine(trees: List[CodeTree]): List[CodeTree] = {
-
+    def combine(trees: List[CodeTree]): List[CodeTree] = trees match {
+      case List() => trees
+      case x :: Nil => List(x)
+      case x :: y :: xs => Fork(x, y, chars(x) ::: chars(y), weight(x) + weight(y)) :: xs
+    }
+  /**{
     def insert (elem : CodeTree, list: List[CodeTree]) : List[CodeTree] = {
       if (list.isEmpty) List(elem)
       else if (weight(elem) <= weight(list.head)) elem :: list else list.head :: insert(elem, list.tail)
@@ -125,7 +129,7 @@ object Huffman {
       chars(trees.head) ::: chars(trees.tail.head),
       weight(trees.head) + weight(trees.tail.head)), trees.tail.tail)
     }
-  }
+  }**/
   
   /**
    * This function will be called in the following way:
@@ -144,11 +148,17 @@ object Huffman {
    *    the example invocation. Also define the return type of the `until` function.
    *  - try to find sensible parameter names for `xxx`, `yyy` and `zzz`.
    */
-    def until(singleton : List[CodeTree] => Boolean, combine : List[CodeTree] => List[CodeTree])
-             (trees: List[CodeTree]) : List[CodeTree] =
-    if (!singleton(trees)) until(singleton, combine) (combine(trees)) else trees
+    def until(singleton: List[CodeTree] => Boolean, combine: List[CodeTree] => List[CodeTree])
+             (trees: List[CodeTree]): List[CodeTree] =
+      if (singleton(trees)) trees else until(singleton, combine)(combine(trees))
+
+  /**
+    if (!singleton(trees)) until(singleton, combine) (combine(trees)) else trees**/
   
   /**
+    *
+    *
+    *
    * This function creates a code tree which is optimal to encode the text `chars`.
    *
    * The parameter `chars` is an arbitrary text. This function extracts the character

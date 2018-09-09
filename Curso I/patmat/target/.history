@@ -110,3 +110,6 @@ run
 test
 clean
 exit
+test
+clean
+exit
