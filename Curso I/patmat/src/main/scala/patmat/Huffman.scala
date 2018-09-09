@@ -17,16 +17,14 @@ object Huffman {
    * leaves.
    */
     abstract class CodeTree
-  case class Fork(left: CodeTree, right: CodeTree, chars: List[Char], weight: Int) extends CodeTree
-  case class Leaf(char: Char, weight: Int) extends CodeTree
-
+    case class Fork(left: CodeTree, right: CodeTree, chars: List[Char], weight: Int) extends CodeTree
+    case class Leaf(char: Char, weight: Int) extends CodeTree
 
   // Part 1: Basics
     def weight(tree: CodeTree): Int = tree match {
-      case Leaf(char, weight) => weight
-      case Fork(l, r, chars, peso) => weight(l) + weight(r)
-  }
-
+      case Leaf(c, w) => w
+      case Fork(l, r, ch, w) => weight(l) + weight(r)
+    }
 
     def chars(tree: CodeTree): List[Char] = tree match {
       case Leaf(char, weight) => List(char)
@@ -76,7 +74,6 @@ object Huffman {
   def times(chars: List[Char]): List[(Char, Int)] = chars match {
     case List() => List()
     case x :: xs => count(x, chars.tail, 1) :: times(chars.filter(y => y != x))
-
     //chars.map(char => (char, chars.count ({_ == char})))
   }
 
@@ -262,9 +259,9 @@ object Huffman {
         case Leaf(char, weight) => (char, encode(tree) (List(char))) :: acum
         case Fork (left, right, chars, weight) => rec(left, acum) ::: rec(right, acum)
       }
-    rec(tree, List())
-  }
-  
+      rec(tree, List())
+    }
+
   /**
    * This function takes two code tables and merges them into one. Depending on how you
    * use it in the `convert` method above, this merge method might also do some transformations

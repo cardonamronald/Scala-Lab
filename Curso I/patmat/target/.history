@@ -105,3 +105,8 @@ sbt rcardo11@eafit.edu.co eHvupbIX6o0PjOsP
 submit rcardo11@eafit.edu.co eHvupbIX6o0PjOsP
 test
 exit
+test
+run 
+test
+clean
+exit
