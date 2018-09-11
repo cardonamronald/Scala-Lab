@@ -119,3 +119,25 @@ test
 sbt clean
 clean
 exit
+test
+sbt clean 
+clean
+exit
+compile 
+compile
+Ronald CArdona malhjdkbhdhdffsvjslfablljbafdm f'afksjfbv 
+compile 
+test
+compile
+ 
+test
+test 
+test
+test 
+test
+test 
+test
+test 
+test
+clean
+exit

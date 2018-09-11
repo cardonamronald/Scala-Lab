@@ -61,4 +61,11 @@ class HuffmanSuite extends FunSuite {
     assert(times(List('a', 'b', 'b', 'a')) == List(('a', 2), ('b', 2)))
   }
 
+  test("Encode with diferent methods must be equivalent") {
+    assert(encode(frenchCode)(decodedSecret) == quickEncode(frenchCode)(decodedSecret))
+  }
+
+  test("Code Table") {
+    assert(convert(frenchCode) != Nil)
+  }
 }
