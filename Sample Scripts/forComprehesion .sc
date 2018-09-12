@@ -13,7 +13,7 @@ def applyF[T, G](a: List[T], f: T => G): List[G] = {
     case x :: xs => f(x) :: applyF(xs, f)
   }
 }
-applyF(List(1, 2, 3), _ + 1)
+applyF(List(1, 2, 3), x => x + 1)
 
 def applyG[T, G](a: List[T], f: T => G): List[G] = a.map(f)
 

@@ -1,4 +1,8 @@
 //Full parameterized mergeSort
+//The implicit parameters are defined in the math.Ordering, the Scala
+//Compiler will figure out the implicit definition, (parameter, val, def).
+//The compiler will search for a definition that is marked implicit, has a type compatible with T or
+//is in the companion object(available everywhere) associated with T.
 
 import math.Ordering
 def msort [T] (xs : List[T])(implicit ord : Ordering[T]) : List[T] = {
@@ -22,6 +26,3 @@ def merge [T] (xs : List[T], ys : List[T]) (implicit ord : Ordering[T]) : List[T
 
 msort(List(30,26,52,6,6,6,5,66,-1,43,4654,4564,0))
 msort(List("Ronald", "Cardona", "Martinez"))
-
-
-
