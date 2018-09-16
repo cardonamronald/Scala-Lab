@@ -34,8 +34,7 @@ def squareList1(xs: List[Int]): List[Int] = xs match {
 
 def squareListMap(xs: List[Int]): List[Int] = xs map (x => x*x)
 val test: List[Int] = List(1, 2, 3, 4)
-if (squareList(test) == squareList1(test) && squareList1(test) == squareListMap(test))
-  println("Yaaay") else ":("
+if (squareList(test) == squareList1(test) && squareList1(test) == squareListMap(test)) println("Yaaay") else ":("
 
 
 val list = List("a", "a", "a", "b", "c", "c", "a")
@@ -45,3 +44,23 @@ def pack[T](xs: List[T]): List[List[T]] = xs match {
     val (first, rest) = xs span(y => y == x)
     first :: pack(rest)
 }
+
+def pack1[T](xs: List[T]): List[List[T]] = xs match {
+  case Nil => Nil
+  case x :: xs1 => val (f, s) = xs.span(y => y == x); f :: pack1(s)
+}
+pack1(list)
+
+def encode[T](xs: List[T]): List[(T, Int)] = pack1(xs) map (x => (x.head, x.length))
+
+encode(list)
+
+
+def mapFun[T, U](xs: List[T], f: T => U): List[U] =
+  (xs foldRight List[U]()) ((y, ys) => f(y) :: ys)
+
+def lengthFun[T](xs: List[T]): Int =
+  (xs foldRight 0) ((_, y) => 1 + y)
+
+def reverse[T](xs: List[T]): List[T] =
+  (xs foldLeft List[T]()) ((xs, x) => x :: xs)
