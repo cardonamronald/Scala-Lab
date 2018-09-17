@@ -29,4 +29,7 @@ def show (queens : List[Int]) = {
       "\n" + (lines mkString "\n")
 }
 
-//for (q <- queens(4)) yield show(q) + '\n'
+val a = System.nanoTime()
+for (q <- queens(4)) yield show(q) + '\n'
+val b = System.nanoTime()
+println("Time " + (b - a) * 1e-9)
