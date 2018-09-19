@@ -2,9 +2,9 @@ package forcomp
 
 
 /**
-  * @author ronaldKM98
+  * @author ronaldkm98
 
-* Useful sites that help when I get stuck
+* Useful sites that help when I got stuck
 *
 * http://stackoverflow.com/questions/22838228/scala-anagram-of-two-strings-using-prime-number
 * https://gist.github.com/BeachBird/753405f2a8817cdd90c9
@@ -45,17 +45,19 @@ object Anagrams {
     * Note: you must use `groupBy` to implement this method!
     */
   def wordOccurrences(w: Word): Occurrences =
-    w.toLowerCase.toList.groupBy((char: Char) => char).mapValues(xs => xs.length).toList.sorted
+    w.toLowerCase.groupBy(c => c).map(x => x._1 -> x._2.length).toList.sorted
 
   /** Converts a sentence into its character occurrence list. */
-  def sentenceOccurrences(s: Sentence): Occurrences = {
+  def sentenceOccurrences(s: Sentence): Occurrences =
+    wordOccurrences(s.foldLeft("")((a, b) => a + b)) // Occurrences of the concat of all the sentence's words
 
-    def helper(s: Sentence): Occurrences = s match {
-      case Nil => Nil
-      case x :: xs => wordOccurrences(x) ::: sentenceOccurrences(s.tail)
-    }
-    helper(s).groupBy(_._1).mapValues(xs => xs.length).toList.sorted
-  }
+  /**{
+    val a = for {
+      word <- s
+      occurrence <- wordOccurrences(word)
+    } yield occurrence
+    a.groupBy(_._1).mapValues(_.length).toList.sorted
+  }*/
 
   /** The `dictionaryByOccurrences` is a `Map` from different occurrences to a sequence of all
     * the words that have that occurrence count.
@@ -73,10 +75,11 @@ object Anagrams {
     *
     */
   lazy val dictionaryByOccurrences: Map[Occurrences, List[Word]] =
-    dictionary.groupBy(wordOccurrences)
+    dictionary groupBy (wordOccurrences)
 
   /** Returns all the anagrams of a given word. */
-  def wordAnagrams(word: Word): List[Word] = dictionaryByOccurrences(wordOccurrences(word))
+  def wordAnagrams(word: Word): List[Word] =
+    dictionaryByOccurrences(wordOccurrences(word))
 
   /** Returns the list of all subsets of the occurrence list.
     * This includes the occurrence itself, i.e. `List(('k', 1), ('o', 1))`
@@ -102,12 +105,17 @@ object Anagrams {
     */
 
   def combinations(occurrences: Occurrences): List[Occurrences] = {
-    val occs: List[Occurrences] = occurrences.map(x => (for (i <- 1 until (x._2 + 1)) yield (x._1, i)).toList)
-    occs.foldRight(List[Occurrences](Nil))((x, y) => y ++ (
-      for {
-        i <- x
-        j <- y
-      } yield i :: j))
+    occurrences match {
+      case List() => List(List())
+      case head :: tail =>
+        val tailCombine = combinations(tail)
+        tailCombine ++ (
+          for {
+            occurrence <- tailCombine
+            index <- 1 to head._2
+          } yield (head._1, index) :: occurrence
+          )
+    }
   }
 
   /** Subtracts occurrence list `y` from occurrence list `x`.
@@ -121,12 +129,13 @@ object Anagrams {
     * and has no zero-entries.
     */
   def subtract(x: Occurrences, y: Occurrences): Occurrences = {
-    y.foldLeft(x) {
-      (xy, y_j) =>
-        for (x_i <- xy) yield {
-          (x_i._1, if (x_i._1 == y_j._1) x_i._2 - y_j._2 else x_i._2)
-        }
-    }.filter(_._2 > 0)
+    def aux(x: Occurrences, y: (Char, Int)): List[(Char, Int)] = {
+      for {
+        occurrence <- x
+      } yield (occurrence._1, if (occurrence._1 == y._1) occurrence._2 - y._2 else occurrence._2)
+    }
+
+    y.foldLeft(x)(aux).filter(_._2 > 0)
   }
 
   /** Returns a list of all anagram sentences of the given sentence.
@@ -169,17 +178,17 @@ object Anagrams {
     *
     * Note: There is only one anagram of an empty sentence.
     */
-  def sentenceAnagrams(sentence: Sentence): List[Sentence] = {
 
-    def helper(occs: Occurrences, acc: Sentence): List[Sentence] = occs match {
-      case List() => List(acc)
-      case occur => for {
-          combination <- combinations(occur)
-          word <- dictionaryByOccurrences(combination)
-          sentence <- helper(subtract(occur, combination), acc ::: List(word))
-        } yield sentence
+    def sentenceAnagrams(sentence: Sentence): List[Sentence] = {
+      def helper(occurrence: Occurrences): List[Sentence] = if (occurrence.isEmpty) List(List())
+      else
+        for {
+          combination <- combinations(occurrence)
+          if !combination.isEmpty
+          if dictionaryByOccurrences.contains(combination)
+          words <- dictionaryByOccurrences(combination)
+          sentence <- helper(subtract(occurrence, combination))
+        } yield words :: sentence
+      helper(sentenceOccurrences(sentence))
     }
-
-    helper(sentenceOccurrences(sentence), Nil)
-  }
 }

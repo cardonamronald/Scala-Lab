@@ -28,6 +28,11 @@ class AnagramsSuite extends FunSuite  {
       List(('a', 1), ('b', 1), ('c', 1), ('e', 1), ('l', 1), ('o', 3), ('r', 3), ('s', 1), ('t', 1)))
   }
 
+  test("sentence occurrences must be equal to word occurrences without spaces") {
+    assert(sentenceOccurrences("I love you".split(" ").toList) ==
+      wordOccurrences("I love you".replace(" ", "")))
+  }
+
 
   test("dictionaryByOccurrences.get: eat") {
     assert(dictionaryByOccurrences.get(List(('a', 1), ('e', 1), ('t', 1))).map(_.toSet) === Some(Set("ate", "eat", "tea")))
