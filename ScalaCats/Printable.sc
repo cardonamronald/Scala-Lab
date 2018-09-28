@@ -20,10 +20,20 @@ object PrintableInstances {
 }
 
 object Printable {
-  def format(value: A)(implicit printable: Printable[A]): String =
+  def format[A](value: A)(implicit printable: Printable[A]): String =
     printable.format(value)
 
-  def print(value: A)(implicit printable: Printable[A]): Unit =
+  def print[A](value: A)(implicit printable: Printable[A]): Unit =
     println(format(value))
+}
 
+class Cat(name: String, age: Int, color: String)
+
+implicit val catPrintable = new Printable[Cat] {
+  def format(cat: Cat) = {
+    val name = Printable.format(cat.name)
+    val age = Printable.format(cat.age)
+    val color = Printable.format(cat.color)
+    s"$name is a $age year-old $color cat."
+  }
 }
