@@ -23,6 +23,7 @@ object PrintableInstances {
         value.toString
     }
 
+  //Another type class instance
   implicit val printableCat: Printable[Cat] =
     new Printable[Cat] {
       override def format(value: Cat): String =
