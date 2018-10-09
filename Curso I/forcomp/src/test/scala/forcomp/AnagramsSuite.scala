@@ -116,5 +116,9 @@ class AnagramsSuite extends FunSuite  {
     )
     assert(sentenceAnagrams(sentence).toSet === anas.toSet)
   }
+  test("Ex") {
+    println(wordAnagrams("rotosudo").toSet)
+    println(wordAnagrams("sloocvena").toSet)
+  }
 
 }

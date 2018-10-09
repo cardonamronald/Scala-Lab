@@ -1,5 +1,4 @@
 //Monoids in Cats
-
 //The type classes
 import cats.Monoid
 import cats.Semigroup
