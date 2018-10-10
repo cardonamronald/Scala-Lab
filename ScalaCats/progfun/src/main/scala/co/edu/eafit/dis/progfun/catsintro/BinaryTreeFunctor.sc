@@ -5,20 +5,19 @@ sealed trait Tree[+A]
 final case class Branch[A](left: Tree[A], right: Tree[A]) extends Tree[A]
 final case class Leaf[A](value: A) extends Tree[A]
 
-implicit val branchFunctor: Functor[Branch] =
-  new Functor[Branch] {
-    override def map[A, B](fa: Branch[A])(f: A => B): Branch[B] = map(fa)(f)
-  }
-
-implicit val leafFunctor: Functor[Leaf] =
-  new Functor[Leaf] {
-    override def map[A, B](fa: Leaf[A])(f: A => B): Leaf[B] = map(fa)(f)
-  }
+object Tree {
+  def branch[A](left: Tree[A], right: Tree[A]): Tree[A] =
+    Branch(left, right)
+  def leaf[A](value: A): Tree[A] =
+    Leaf(value)
+}
 
 implicit val TreeFunctor: Functor[Tree] =
   new Functor[Tree] {
     override def map[A, B](fa: Tree[A])(f: A => B): Tree[B] = fa match {
       case Branch(left, right) => Branch(map(left)(f), map(right)(f))
-      case Leaf(v) => Leaf(map(v)(f))
+      case Leaf(v) => Leaf(f(v))
     }
   }
+
+Tree.branch(Tree.leaf(10), Tree.branch(Tree.leaf(20), Tree.leaf(30))).map(_ * 2)
