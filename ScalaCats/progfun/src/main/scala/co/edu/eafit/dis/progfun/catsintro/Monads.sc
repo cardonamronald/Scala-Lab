@@ -26,13 +26,13 @@ strDivideBy("44", "2")
 stringDivideBy("44", "2")
 
 //Lists as sets of intermediate results
-//Flat map calculate permutations and combinations over that lists
+//Flatmap calculate permutations and combinations over that lists
 for {
   x <- (1 to 3).toList
   y <- (4 to 5).toList
 } yield (x, y)
 
-//Future is a monad that sequences computa􀦞ons without worrying that they
+//Future is a monad that sequences computations without worrying that they
 //are asynchronous:
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -56,7 +56,8 @@ def doSomethingVeryLongRunning: Future[Int] =
 //Map function on Monad
 import scala.language.higherKinds
 //Pure -> Constructor
-trait Monad[F[_]] {
+
+trait MyMonad[F[_]] {
   def pure[A](a: A): F[A]
 
   def flatMap[A, B](value: F[A])(func: A => F[B]): F[B]
@@ -95,13 +96,24 @@ Monad[Vector].flatMap(Vector(1, 2, 3))(a => Vector(a, a*10))
 
 
 import scala.concurrent.ExecutionContext.Implicits.global //fixes the
-// implicit resolu􀦞on required to summon the instance
+// implicit resolution required to summon the instance
 import cats.instances.future._ // for Monad
 import scala.concurrent._
 import scala.concurrent.duration._
 val fm = Monad[Future]
 
-//Syntax, comes from Functor(Map), flatMap(flatMap), Applicative(Pure)
+//Monad syntax
+//Syntax, comes from Functor(for Map), flatMap(for flatMap),
+// Applicative(for Pure)
+import cats.instances.option._ //Monad
+import cats.instances.list._  //Monad
+import cats.syntax.applicative._ //Pure
+1.pure[Option]
+1.pure[List]
+
+//We can define generic functions that performs a calculation on parameters
+//that come wrapped in a monad of the user's choice
+
 import cats.Monad
 import cats.syntax.functor._ // for map
 import cats.syntax.flatMap._ // for flatMap
@@ -113,14 +125,33 @@ def _sumSquare[F[_]: Monad](a: F[Int], b: F[Int]): F[Int] =
 import cats.instances.option._ // for Monad
 import cats.instances.list._ // for Monad
 sumSquare(Option(3), Option(4))
-// res8: Option[Int] = Some(25)
+//Note that sumSquare works for any Monad instance, even one that still
+// doesn't exists
 sumSquare(List(1, 2, 3), List(4, 5))
 // res9: List[Int] = List(17, 26, 20, 29, 25, 34)
 
-
-
+//A for-comprehension can do the same as above
 def sumSquare[F[_]: Monad](a: F[Int], b: F[Int]): F[Int] =
   for {
     x <- a
     y <- b
   } yield x*x + y*y
+
+implicit val OptionMonad: Monad[Option] = new Monad[Option] {
+  override def pure[A](a: A): Option[A] = Some(a)
+
+  override def flatMap[A, B](fa: Option[A])(f: A => Option[B]): Option[B] =
+    fa match {
+      case Some(a) => f(a)
+      case None    => None
+    }
+
+  override def map[A, B](fa: Option[A])(f: A => B): Option[B] =
+    flatMap(fa)(x => pure(f(x)))
+
+  override def tailRecM[A, B](a: A)(f: A => Option[Either[A, B]]): Option[B] =
+    ???
+}
+val tenDividedSafe: Int => Option[Int] = x => if (x == 0) None else Some(10 / x)
+val flatMapped3 = OptionMonad.flatMap(Some(3))(tenDividedSafe)
+val flatMapped4 = OptionMonad.flatMap(Some(0))(tenDividedSafe)
