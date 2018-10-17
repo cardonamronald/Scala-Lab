@@ -32,7 +32,7 @@ for {
   y <- (4 to 5).toList
 } yield (x, y)
 
-//Future is a monad that sequences computa􀦞ons without worrying that they
+//Future is a monad that sequences computations without worrying that they
 //are asynchronous:
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -108,7 +108,7 @@ import cats.syntax.flatMap._ // for flatMap
 import scala.language.higherKinds
 
 def _sumSquare[F[_]: Monad](a: F[Int], b: F[Int]): F[Int] =
-  a.flatMap(x => b.map(y => x*x + y*y))
+  a.flatMap(x => b.map(y => x * x + y * y))
 
 import cats.instances.option._ // for Monad
 import cats.instances.list._ // for Monad
