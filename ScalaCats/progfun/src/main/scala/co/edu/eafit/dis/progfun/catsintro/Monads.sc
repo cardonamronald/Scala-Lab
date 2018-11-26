@@ -5,7 +5,7 @@ def divide(a: Int, b: Int): Option[Int] =
   if(b == 0) None else Some(a / b)
 
 //If the result is Some the flatMap method will append the next computation
-//else they will return None. Because parseInt and divide return Options
+//else they will return None. Because parseInt and divide return Options.
 def stringDivideBy(aStr: String, bStr: String): Option[Int] =
   parseInt(aStr).flatMap { aNum =>
     parseInt(bStr).flatMap { bNum =>
@@ -84,7 +84,7 @@ val list2 = Monad[List].
 
 val list3 = Monad[List].map(list2)(a => a + 123)
 
-//cats provides default instances for all the monads in Scala
+//cats provides default instances for all the monads in Scala Standard Library
 import cats.instances.option._ // for Monad
 Monad[Option].flatMap(Option(1))(a => Option(a*2))
 

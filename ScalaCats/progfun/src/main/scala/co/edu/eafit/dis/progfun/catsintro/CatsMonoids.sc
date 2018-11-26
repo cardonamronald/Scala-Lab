@@ -25,7 +25,7 @@ Monoid[Option[Int]].combine(a, b)
 
 //Monoid syntax
 import cats.instances.string._
-import cats.syntax.semigroup._
+import cats.syntax.semigroup._ //For |+|
 
 val strRes: String =
   "Hi" |+| "There" |+| Monoid[String].empty
@@ -37,6 +37,7 @@ val strRes: String =
 def add(items: List[Int]): Int = items.foldLeft(0)(_ + _)
 
 //Combines(sums) any type which have a monoid in the implicit scope
+//Open for extension, closed for modification -- OpenClose
 def add[A](items: List[A])(implicit monoid: Monoid[A]): A =
   items.foldLeft(monoid.empty)(_ |+| _)
 
@@ -53,5 +54,6 @@ implicit val OrderMonoid: Monoid[Order] = new Monoid[Order] {
   override def empty: Order = Order(0, 0)
 }
 
-val orders = List(Order(1, 2), Order(1, 2), Order(1, 2), Order(1, 2), Order(1, 2), Order(1, 2), Order(1, 2))
+val orders = List(Order(1, 2), Order(1, 2), Order(1, 2), Order(1, 2),
+                  Order(1, 2), Order(1, 2), Order(1, 2))
 add(orders)

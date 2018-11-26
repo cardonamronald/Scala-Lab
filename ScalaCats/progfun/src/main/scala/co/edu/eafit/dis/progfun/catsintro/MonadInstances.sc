@@ -8,7 +8,7 @@ import cats.syntax.flatMap._ // for flatMap
 import scala.language.higherKinds
 
 def sumSquare[F[_]: Monad](a: F[Int], b: F[Int]): F[Int] =
-  a.flatMap(x => b.map(y => x*x + y*y))
+  a.flatMap(x => b.map(y => x * x + y * y))
 sumSquare(3: Id[Int], 4: Id[Int]) //Puts int into a monadic context using Id
 
 //Exercise: Defining my own Id Monad
@@ -21,7 +21,7 @@ implicit val IdMonad: Monad[Id] = new Monad[Id] {
   override def map[A, B](fa: Id[A])(f: A => B): Id[B] =
     flatMap(fa)(f)
 
-  override def tailRecM[A, B](a: A)(f: (A) => Id[Either[A, B]]): Id[B] = ???
+  override def tailRecM[A, B](a: A)(f: A => Id[Either[A, B]]): Id[B] = ???
 }
 
 //Either
@@ -137,7 +137,7 @@ def foldRightEval[A, B](as: List[A], acc: Eval[B])
     case Nil => acc
   }
 
-foldRight((1 to 100000).toList, 0L)(_ + _)
+foldRight((1 to 100).toList, 0L)(_ + _)
 
 //The writer Monad
 

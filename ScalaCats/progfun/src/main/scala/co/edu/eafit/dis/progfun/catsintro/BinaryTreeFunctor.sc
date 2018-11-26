@@ -12,12 +12,11 @@ object Tree {
     Leaf(value)
 }
 
-implicit val TreeFunctor: Functor[Tree] =
-  new Functor[Tree] {
+implicit val TreeFunctor: Functor[Tree] = new Functor[Tree] {
     override def map[A, B](fa: Tree[A])(f: A => B): Tree[B] = fa match {
       case Branch(left, right) => Branch(map(left)(f), map(right)(f))
       case Leaf(v) => Leaf(f(v))
     }
   }
 
-Tree.branch(Tree.leaf(10), Tree.branch(Tree.leaf(20), Tree.leaf(30))).map(_ * 2)
+TreeFunctor.map(Tree.branch(Tree.leaf(10), Tree.branch(Tree.leaf(20), Tree.leaf(30))))(_ + 1)
