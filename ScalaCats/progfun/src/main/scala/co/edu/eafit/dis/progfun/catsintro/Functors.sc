@@ -1,4 +1,6 @@
 // The Functor type class
+import java.awt.print.Printable
+
 import scala.language.higherKinds
 import cats.Functor
 import cats.instances.list._
@@ -20,9 +22,11 @@ val mapped2 = Functor[List].map(List(1, 2, 3))(x => x + 1).map(x => x * 2).map(x
 
 mapped1 == mapped2 //res0: Boolean = true
 
-//So, why use Functors if scala's basic language features allows you to do the same?
+//So, why use Functors if scala's basic language features allows you to do the
+// same?
 
-// We could also use the Functors 'lift' method to transform a function A => B into a function F[A] => F[B]
+// We could also use the Functors 'lift' method to transform a function A => B
+// into a function F[A] => F[B]
 val func = (x: Int) => x + 1 // Int => Int
 val liftedFunc = Functor[Option].lift(func) //Option[A] => Option[B]
   liftedFunc(Option(1))
@@ -37,15 +41,15 @@ val func3 = (a: Int) => a + "!"
 val func4 = func1.map(func2).map(func3)
 func4(123)
 
-//Higher level of abstraction
+//Higher level of abstraction, abtract over Functors of any type
 def doMath[F[_]](start: F[Int])(implicit functor: Functor[F]): F[Int] =
-  start.map(n => n + 1 * 2).map(_-1).map(_/800).map(_+9)
+  start.map(n => n + 1 * 2).map(_ - 1).map(_ / 800).map(_ + 9)
 
 import cats.instances.option._ // for Functor
 import cats.instances.list._ // for Functor
 
-doMath(Option(20))
-doMath(List(1, 2, 3))
+doMath(Option(20)) //Cool :)
+doMath(List(1, 2, 3)) //:o
 
 //Build a custom Functor for a custom type only by defining its map method
 
@@ -55,7 +59,8 @@ implicit val optionFunctor: Functor[Option] =
     override def map[A, B](fa: Option[A])(f: A => B): Option[B] = fa.map(f)
   }
 
-//Contravariant Functors -- Allows us to prepend operations into a chain with contramap
+//Contravariant Functors -- Allows us to prepend operations into a chain with
+// contramap
 
 // We have tha ability con convert an A into a string
 // We also know how to convert a B into an A
@@ -96,6 +101,7 @@ implicit def boxPrintable[A](implicit printable: Printable[A]): Printable[Box[A]
 
 //Conclusion: Wherever we have an F[A] and a conversion A => B
 // we can always convert to an F[B], because of Covariance
+
 
 //Invariant Functors -- Prepend and Append with imap method
 trait Codec[A] {

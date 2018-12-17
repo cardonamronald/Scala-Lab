@@ -9,7 +9,7 @@ final case class Person(name: String, email: String)
 final case class Cat(name: String, age: Int, color: String)
 
 object PrintableInstances {
-  //Type class instance -- Concrete implementations of Printable
+  //Type class instance -- Contains concrete implementations of Printable
   implicit val printableString: Printable[String] =
     new Printable[String] {
       def format(value: String): String =
@@ -43,12 +43,14 @@ object PrintableInstances {
     }
 }
 
-//Singleton object with the interface methods
+/*
+ * Singleton object with the interface methods
+ * Create an interface by placing methods in a singleton object
+ */
 object Printable {
   //Interfaces are methods that accept instances of a type class as
   //implicit parameters
 
-  //Create an interface by placing methods in a singleton object
   def format[A](value: A)(implicit printable: Printable[A]): String =
     printable.format(value)
 
