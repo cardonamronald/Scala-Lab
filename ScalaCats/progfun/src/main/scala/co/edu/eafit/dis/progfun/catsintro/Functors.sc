@@ -64,7 +64,7 @@ implicit val optionFunctor: Functor[Option] =
 
 // We have tha ability con convert an A into a string
 // We also know how to convert a B into an A
-// And we need do convert a B into a string, so..
+// And we need to convert a B into a string, so..
 // We convert B to A and A to string, that's
 // (B => A) => String, then:
 trait Printable[A] {
@@ -160,6 +160,7 @@ decode[Box[Double]]("123.4")
 
 //Contravariant in Cats -- -- --
 import cats.Contravariant
+
 import cats.Show
 import cats.instances.string._
 val showString = Show[String]
@@ -168,7 +169,7 @@ val showSymbol = Contravariant[Show].
 showSymbol.show('dave)
 
 //Invariant in Cats -- -- --
-
+// There's an instance of Invariant for Monoids
 import cats.Monoid
 import cats.instances.string._ // for Monoid
 import cats.syntax.invariant._ // for imap

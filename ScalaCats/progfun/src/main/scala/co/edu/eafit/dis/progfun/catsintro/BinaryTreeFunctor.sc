@@ -1,4 +1,5 @@
 import cats.Functor
+import cats.Monad
 
 //Binary Tree Functor
 sealed trait Tree[+A]
@@ -25,3 +26,18 @@ implicit val TreeFunctor: Functor[Tree] = new Functor[Tree] {
 TreeFunctor.map(Tree.branch(Tree.leaf(10),
   Tree.branch(Tree.leaf(20),
     Tree.leaf(30))))(_ + 1)
+
+/**
+  * Binary Tree Monad
+  * */
+implicit val TreeMonad: Monad[Tree] = new Monad[Tree] {
+  override def pure[A](x: A): Tree[A] = Leaf(x)
+  //Saca del contexto y aplica la funcion
+  override def flatMap[A, B](fa: Tree[A])(f: A => Tree[B]): Tree[B] =
+    fa match {
+      case Branch(l, r) => Branch(flatMap(l)(f), flatMap(r)(f))
+      case Leaf(v) => f(v)
+    }
+
+  override def tailRecM[A, B](a: A)(f: A => Tree[Either[A, B]]): Tree[B] = ???
+}
