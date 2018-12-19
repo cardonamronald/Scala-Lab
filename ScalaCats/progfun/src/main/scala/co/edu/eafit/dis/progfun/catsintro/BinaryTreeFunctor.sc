@@ -1,6 +1,8 @@
 import cats.Functor
 import cats.Monad
 
+import scala.annotation.tailrec
+
 //Binary Tree Functor
 sealed trait Tree[+A]
 final case class Branch[A](left: Tree[A], right: Tree[A]) extends Tree[A]
@@ -32,6 +34,7 @@ TreeFunctor.map(Tree.branch(Tree.leaf(10),
   * */
 implicit val TreeMonad: Monad[Tree] = new Monad[Tree] {
   override def pure[A](x: A): Tree[A] = Leaf(x)
+  
   //Saca del contexto y aplica la funcion
   override def flatMap[A, B](fa: Tree[A])(f: A => Tree[B]): Tree[B] =
     fa match {
@@ -39,5 +42,23 @@ implicit val TreeMonad: Monad[Tree] = new Monad[Tree] {
       case Leaf(v) => f(v)
     }
 
-  override def tailRecM[A, B](a: A)(f: A => Tree[Either[A, B]]): Tree[B] = ???
+  /**
+    * Not tail-rec */
+  def tailRecM[A, B](arg: A)
+                    (func: A => Tree[Either[A, B]]): Tree[B] =
+    func(arg) match {
+      case Branch(l, r) =>
+        Branch(
+          flatMap(l) {
+            case Left(l) => tailRecM(l)(func)
+            case Right(l) => pure(l)
+          },
+          flatMap(r) {
+            case Left(r) => tailRecM(r)(func)
+            case Right(r) => pure(r)
+          }
+        )
+      case Leaf(Left(value)) => tailRecM(value)(func)
+      case Leaf(Right(value)) => Leaf(value)
+    }
 }
