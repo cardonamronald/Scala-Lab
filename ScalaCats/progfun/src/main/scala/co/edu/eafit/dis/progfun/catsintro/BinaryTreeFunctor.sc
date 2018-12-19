@@ -34,7 +34,7 @@ TreeFunctor.map(Tree.branch(Tree.leaf(10),
   * */
 implicit val TreeMonad: Monad[Tree] = new Monad[Tree] {
   override def pure[A](x: A): Tree[A] = Leaf(x)
-  
+
   //Saca del contexto y aplica la funcion
   override def flatMap[A, B](fa: Tree[A])(f: A => Tree[B]): Tree[B] =
     fa match {
