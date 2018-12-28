@@ -1,22 +1,18 @@
-import scala.concurrent.Future
-import cats.instances.future._
 import cats.{Applicative, Id}
 import cats.instances.list._
 import cats.syntax.traverse._
 import cats.syntax.functor._ // for map
-
-import scala.concurrent.ExecutionContext.Implicits.global
 import scala.language.higherKinds
 
 trait UptimeClient[F[_]] {
   def getUptime(hostname: String): F[Int]
 }
-
+/**
 trait RealUptimeClient extends UptimeClient[Future] {
   def getUptime(hostname: String): Future[Int]
 }
 
-/**trait TestUptimeClient extends UptimeClient[Id] {
+trait TestUptimeClient extends UptimeClient[Id] {
   def getUptime(hostname: String): Id[Int]
 }*/
 
