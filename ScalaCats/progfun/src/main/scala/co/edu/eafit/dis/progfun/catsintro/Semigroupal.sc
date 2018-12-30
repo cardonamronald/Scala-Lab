@@ -121,22 +121,52 @@ import cats.syntax.validated._ //For valid and invalid
 
 
 /**
-  * Exercise: Form Validation*/
+  * Exercise: Form Validation
+  * */
+import cats.data.Validated
+import cats.syntax.either._ // for catchOnly
+
+type FormData = Map[String, String]
+type FailFast[A] = Either[List[String], A]
+type FailSlow[A] = Validated[List[String], A]
+type NumFmtExn = NumberFormatException
+
 case class User(name: String, age: Int)
 
-def readName(map: Map[String, String]): Either[List[String], String] = ???
+def readName(data: FormData): FailFast[String] =
+  getValue("name")(data).flatMap(nonBlank("name"))
 
-def readAge(map: Map[String, String]): Either[List[String], String] = ???
+def readAge(data: FormData): FailFast[Int] =
+  getValue("age")(data).
+    flatMap(nonBlank("age")).
+    flatMap(parseInt("age")).
+    flatMap(nonNegative("age"))
 
-def getValue(field: String): String =  ???
+def getValue(name: String)(data: FormData): FailFast[String] =
+  data.get(name).
+    toRight(List(s"$name field not specified"))
 
-def parseInt(number: String): Int = Integer.parseInt(number)
+def parseInt(name: String)(data: String): FailFast[Int] =
+  Either.catchOnly[NumFmtExn](data.toInt).
+    leftMap(_ => List(s"$name must be an integer"))
 
-def nonBlank(string: String) = ???
+def nonBlank(name: String)(data: String): FailFast[String] =
+  Either.right(data).filterOrElse(_.nonEmpty, List(s"$name cannot be blank"))
 
-def NonNegative(int: Int) = ???
+def nonNegative(name: String)(data: Int): FailFast[Int] =
+  Either.right(data).filterOrElse(_ >= 0, List(s"$name must be non-negative"))
 
+import cats.instances.list._ // for Semigroupal
+import cats.syntax.apply._ // for mapN
 
+def readUser(data: FormData): FailSlow[User] =
+  (readName(data).toValidated, readAge(data).toValidated
+  ).mapN(User.apply)
+
+readUser(Map("name" -> "Dave", "age" -> "37"))
+// res48: FailSlow[User] = Valid(User(Dave,37))
+readUser(Map("age" -> "-1"))
+// res49: FailSlow[User] = Invalid(List(name field not specified, age must be non-negative))
 
 
 
