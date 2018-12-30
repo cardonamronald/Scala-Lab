@@ -75,3 +75,77 @@ val heathcliff: Cat2 = Cat2("Heathcliff", 1988, List("Junk Food"))
 // If has two monoids in scope it will fail
 // res17: Cat = Cat(GarfieldHeathcliff,3966,List(Lasagne, Junk Food))
 
+import cats.instances.either._ // for Semigroupal
+
+type ErrorOr[A] = Either[Vector[String], A]
+
+Semigroupal[ErrorOr].product(
+  Left(Vector("Error 1")),
+  Left(Vector("Error 2"))
+)
+// res7: ErrorOr[(Nothing, Nothing)] = Left(Vector(Error 1))
+
+//Exercise
+import scala.language.higherKinds
+import cats.Monad
+import cats.syntax.flatMap._
+import cats.syntax.functor._
+
+def product[M[_]: Monad, A, B](x: M[A], y: M[B]): M[(A, B)] =
+  x.flatMap(a => y.map(b => (a, b)))
+
+/**
+  * The validated data type
+  * */
+import cats.Semigroupal
+import cats.data.Validated
+import cats.instances.list._ // for Monoid
+
+type AllErrorsOr[A] = Validated[List[String], A]
+
+Semigroupal[AllErrorsOr].product(
+  Validated.invalid(List("Error 1")),
+  Validated.invalid(List("Error 2"))
+)
+
+import cats.syntax.validated._ //For valid and invalid
+
+123.valid.map(_ * 100)
+// res17: cats.data.Validated[Nothing,Int] = Valid(12300)
+"?".invalid.leftMap(_.toString)
+// res18: cats.data.Validated[String,Nothing] = Invalid(?)
+123.valid[String].bimap(_ + "!", _ * 100)
+// res19: cats.data.Validated[String,Int] = Valid(12300)
+"?".invalid[Int].bimap(_ + "!", _ * 100)
+// res20: cats.data.Validated[String,Int] = Invalid(?!)
+
+
+/**
+  * Exercise: Form Validation*/
+case class User(name: String, age: Int)
+
+def readName(map: Map[String, String]): Either[List[String], String] = ???
+
+def readAge(map: Map[String, String]): Either[List[String], String] = ???
+
+def getValue(field: String): String =  ???
+
+def parseInt(number: String): Int = Integer.parseInt(number)
+
+def nonBlank(string: String) = ???
+
+def NonNegative(int: Int) = ???
+
+
+
+
+
+
+
+
+
+
+
+
+
+
