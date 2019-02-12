@@ -35,7 +35,7 @@ for {
 //Future is a monad that sequences computations without worrying that they
 //are asynchronous:
 import scala.concurrent.Future
-import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.ExecutionContext.Implicits.global //Execution context is needed
 import scala.concurrent.duration._
 def doSomethingLongRunning: Future[Int] = ???
 def doSomethingElseLongRunning: Future[Int] = ???

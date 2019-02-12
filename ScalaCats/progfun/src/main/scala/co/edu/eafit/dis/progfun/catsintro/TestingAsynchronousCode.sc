@@ -16,12 +16,14 @@ trait TestUptimeClient extends UptimeClient[Id] {
   def getUptime(hostname: String): Id[Int]
 }*/
 
+//Production env
 class UptimeService[F[_]] (client: UptimeClient[F])
                           (implicit val applicative: Applicative[F]) {
   def getTotalUptime(hostnames: List[String]): F[Int] =
     hostnames.traverse(client.getUptime).map(_.sum)
 }
 
+//Test env. Synchronous
 class TestUptimeClient(hosts: Map[String, Int]) extends UptimeClient[Id] {
   def getUptime(hostname: String): Id[Int] =
     hosts.getOrElse(hostname, 0)
