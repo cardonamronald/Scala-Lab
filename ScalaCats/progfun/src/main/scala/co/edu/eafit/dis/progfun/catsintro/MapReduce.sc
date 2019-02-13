@@ -58,7 +58,7 @@ def parallelFoldMap[A, B: Monoid] (values: Vector[A])
       List(1, 2, 3, 4, 5, 6, 7, 8, 9).toVector)(_.toString), 1.second)
 
 
-//Parallel foldMap with more cats
+//Parallel foldMap with more Cats
 import cats.Monoid
 import cats.Foldable
 import cats.Traverse
