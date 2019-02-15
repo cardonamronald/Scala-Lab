@@ -139,18 +139,17 @@ class WikipediaSuite extends FunSuite with BeforeAndAfterAll {
     import WikipediaRanking._
     val langs = List("Scala", "Java", "Groovy", "Haskell", "Erlang")
     val articles = List(
-        WikipediaArticle("1","Groovy is pretty interesting, and so is Erlang"),
-        WikipediaArticle("2","Scala and Java run on the JVM"),
-        WikipediaArticle("3","Scala is not purely functional"),
-        WikipediaArticle("4","The cool kids like Haskell more than Java"),
-        WikipediaArticle("5","Java is for enterprise developers")
-      )
+      WikipediaArticle("1","Groovy is pretty interesting, and so is Erlang"),
+      WikipediaArticle("2","Scala and Java run on the JVM"),
+      WikipediaArticle("3","Scala is not purely functional"),
+      WikipediaArticle("4","The cool kids like Haskell more than Java"),
+      WikipediaArticle("5","Java is for enterprise developers")
+    )
     val rdd = sc.parallelize(articles)
     val ranked = rankLangsReduceByKey(langs, rdd)
+
     val res = (ranked.head._1 == "Java")
-    println("HEAD ES", ranked.head._1)
+
     assert(res)
   }
-
-
 }

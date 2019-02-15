@@ -54,7 +54,15 @@ object WikipediaRanking {
   /* Compute an inverted index of the set of articles, mapping each language
    * to the Wikipedia pages in which it occurs.
    */
-  def makeIndex(langs: List[String], rdd: RDD[WikipediaArticle]): RDD[(String, Iterable[WikipediaArticle])] = ???
+  def makeIndex(langs: List[String], rdd: RDD[WikipediaArticle]): RDD[(String, Iterable[WikipediaArticle])] = {
+    val notReducedRDD: RDD[(String, WikipediaArticle)] = for {
+      article <- rdd
+      lang <- langs
+      if article.mentionsLanguage(lang)
+    } yield (lang, article)
+
+    notReducedRDD.groupByKey()
+  }
 
   /* (2) Compute the language ranking again, but now using the inverted index. Can you notice
    *     a performance improvement?
@@ -62,7 +70,9 @@ object WikipediaRanking {
    *   Note: this operation is long-running. It can potentially run for
    *   several seconds.
    */
-  def rankLangsUsingIndex(index: RDD[(String, Iterable[WikipediaArticle])]): List[(String, Int)] = ???
+  def rankLangsUsingIndex(index: RDD[(String, Iterable[WikipediaArticle])]): List[(String, Int)] = {
+    index.map(entry => (entry._1, entry._2.size)).collect().sortBy(_._2).toList.reverse
+  }
 
   /* (3) Use `reduceByKey` so that the computation of the index and the ranking are combined.
    *     Can you notice an improvement in performance compared to measuring *both* the computation of the index
@@ -77,7 +87,7 @@ object WikipediaRanking {
       lang <- langs
       if article.mentionsLanguage(lang)
     } yield (lang, 1)
-    occurrences.reduceByKey(_ + _).collect().toList.sorted.reverse
+    occurrences.reduceByKey(_ + _).collect().toList.sortBy(_._2).reverse
   }
 
   def main(args: Array[String]) {
@@ -86,7 +96,7 @@ object WikipediaRanking {
     val langsRanked: List[(String, Int)] = timed("Part 1: naive ranking", rankLangs(langs, wikiRdd))
 
     /* An inverted index mapping languages to wikipedia pages on which they appear */
-    def index: RDD[(String, Iterable[WikipediaArticle])] = makeIndex(langs, wikiRdd)
+    def index: RDD[(String, Iterable[WikipediaArticle])] = makeIndex(langs, wikiRdd).persist()
 
     /* Languages ranked according to (2), using the inverted index */
     val langsRanked2: List[(String, Int)] = timed("Part 2: ranking using inverted index", rankLangsUsingIndex(index))
