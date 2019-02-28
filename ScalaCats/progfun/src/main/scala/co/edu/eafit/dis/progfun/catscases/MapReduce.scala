@@ -4,12 +4,12 @@ import cats.Monoid
 import scala.concurrent._
 import scala.concurrent.{Await, Future}
 import scala.concurrent.Future
-import cats.instances.string._ // for Monoid
-import cats.syntax.semigroup._ //For combine |+|
-import cats.instances.int._ // for Monoid
-import cats.instances.vector._ // for Foldable and Traverse
-import cats.syntax.foldable._ // for combineAll and foldMap
-import cats.syntax.traverse._ // for traverse
+import cats.instances.string._
+import cats.syntax.semigroup._
+import cats.instances.int._
+import cats.instances.vector._
+import cats.syntax.foldable._
+import cats.syntax.traverse._
 import scala.concurrent.duration._
 import scala.concurrent.ExecutionContext.Implicits.global
 import cats.instances.future._
