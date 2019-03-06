@@ -64,8 +64,6 @@ import PrintableInstances._
 Printable.format(Cat("Ronald", 10, "Red"))
 Printable.format(Option("Holi"))
 
-
-
 //Interface Syntax,
 object PrintableSyntax {
   implicit class PrintableOps[A](value: A) {

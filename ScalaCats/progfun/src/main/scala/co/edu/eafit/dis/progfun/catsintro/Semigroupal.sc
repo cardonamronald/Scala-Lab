@@ -167,3 +167,15 @@ readUser(Map("name" -> "Dave", "age" -> "37"))
 // res48: FailSlow[User] = Valid(User(Dave,37))
 readUser(Map("age" -> "-1"))
 // res49: FailSlow[User] = Invalid(List(name field not specified, age must be non-negative))
+
+
+
+
+
+
+
+
+
+
+
+
