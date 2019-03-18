@@ -1,5 +1,6 @@
 .idea
 *.xml
+*.csv
 data/
 # Created by https://www.gitignore.io/api/sbt,scala,eclipse
 
@@ -88,6 +89,7 @@ sparkmlib/resources
 .DS_Store
 ScalaCats/progfun/project/
 curso IV/wikipedia/src/main/resources/wikipedia/
-
+curso IV/stackoverflow/src/main/resources/stackoverflow/
+curso IV/stackoverflow/src/test/resources/stackoverflow/
 
 # End of https://www.gitignore.io/api/sbt,scala,eclipse
