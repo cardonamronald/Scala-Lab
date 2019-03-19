@@ -12,7 +12,6 @@ case class Posting(postingType: Int, id: Int, acceptedAnswer: Option[Int],
                    parentId: Option[QID], score: Int, tags: Option[String])
   extends Serializable
 
-
 /** The main class */
 object StackOverflow extends StackOverflow {
 
@@ -26,7 +25,7 @@ object StackOverflow extends StackOverflow {
     val grouped = groupedPostings(raw)
     val scored  = scoredPostings(grouped)
     val vectors = vectorPostings(scored)
-    //    assert(vectors.count() == 2121822, "Incorrect number of vectors: " + vectors.count())
+    assert(vectors.count() == 2121822, "Incorrect number of vectors: " + vectors.count())
     val means   = kmeans(sampleVectors(vectors), vectors, debug = true)
     val results = clusterResults(means, vectors)
     printResults(results)
@@ -91,7 +90,6 @@ class StackOverflow extends Serializable {
     joint.groupByKey
   }
 
-
   /** Compute the maximum score for each posting */
   def scoredPostings(grouped: RDD[(QID, Iterable[(Question, Answer)])]): RDD[(Question, HighScore)] = {
     def answerHighScore(as: Array[Answer]): HighScore = {
@@ -125,7 +123,8 @@ class StackOverflow extends Serializable {
         }
       }
     }
-    scored.map(pair => (firstLangInTag(pair._1.tags, List()).get, pair._2))
+    scored.map(pair =>
+      (firstLangInTag(pair._1.tags, langs).get * langSpread, pair._2)).cache()
   }
 
 
@@ -153,7 +152,6 @@ class StackOverflow extends Serializable {
           res(j.toInt) = elt
         i += 1
       }
-
       res
     }
 
@@ -179,10 +177,18 @@ class StackOverflow extends Serializable {
   //
 
   /** Main kmeans computation */
-  @tailrec final def kmeans(means: Array[(Int, Int)], vectors: RDD[(Int, Int)], iter: Int = 1, debug: Boolean = false): Array[(Int, Int)] = {
-    val newMeans = means.clone() // you need to compute newMeans
+  @tailrec final def kmeans(means: Array[(Int, Int)], vectors: RDD[(Int, Int)], iter: Int = 1, debug: Boolean = false):
+                                                                                                  Array[(Int, Int)] = {
+    // TODO: Fill in the newMeans array.
+    val meanIdsMap: Map[Int, (Int, Int)] = (for {
+      vector <- vectors
+    } yield (findClosest(vector, means), vector)).collect().toMap
 
-    // TODO: Fill in the newMeans array
+    val newMeans = means.indices.map(i =>
+      // If i is in the last calculated centroids else the old mean is used
+      meanIdsMap.getOrElse(i, means(i))
+    ).toArray
+
     val distance = euclideanDistance(means, newMeans)
 
     if (debug) {
@@ -224,7 +230,7 @@ class StackOverflow extends Serializable {
     part1 + part2
   }
 
-  /** Return the euclidean distance between two points */
+  /** Return the euclidean distance between two sets of points */
   def euclideanDistance(a1: Array[(Int, Int)], a2: Array[(Int, Int)]): Double = {
     assert(a1.length == a2.length)
     var sum = 0d
@@ -249,7 +255,6 @@ class StackOverflow extends Serializable {
     }
     bestIndex
   }
-
 
   /** Average the vectors */
   def averageVectors(ps: Iterable[(Int, Int)]): (Int, Int) = {
@@ -277,8 +282,8 @@ class StackOverflow extends Serializable {
 
     val median = closestGrouped.mapValues { vs =>
       val langLabel: String   = ??? // most common language in the cluster
-    val langPercent: Double = ??? // percent of the questions in the most common language
-    val clusterSize: Int    = ???
+      val langPercent: Double = ??? // percent of the questions in the most common language
+      val clusterSize: Int    = ???
       val medianScore: Int    = ???
 
       (langLabel, langPercent, clusterSize, medianScore)
