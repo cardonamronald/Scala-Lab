@@ -3,7 +3,7 @@ name := course.value + "-" + assignment.value
 scalaVersion := "2.11.12"
 
 scalacOptions ++= Seq("-deprecation")
-
+lazy val scalaTestDependency = "org.scalatest" %% "scalatest" % "3.2.0-SNAP10" % Test
 courseId := "e8VseYIYEeWxQQoymFg8zQ"
 
 resolvers += Resolver.sonatypeRepo("releases")
