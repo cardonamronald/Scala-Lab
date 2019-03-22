@@ -108,7 +108,7 @@ class StackOverflow extends Serializable {
   }
 
 
-  /** Compute the vectors for the kmeans */
+  /** Compute the vectors for the k means */
   def vectorPostings(scored: RDD[(Question, HighScore)]): RDD[(LangIndex, HighScore)] = {
     /** Return optional index of first language that occurs in `tags`. */
     def firstLangInTag(tag: Option[String], ls: List[String]): Option[Int] = {
@@ -169,7 +169,6 @@ class StackOverflow extends Serializable {
     res
   }
 
-
   //
   //
   //  Kmeans method:
@@ -179,10 +178,18 @@ class StackOverflow extends Serializable {
   /** Main kmeans computation */
   @tailrec final def kmeans(means: Array[(Int, Int)], vectors: RDD[(Int, Int)], iter: Int = 1, debug: Boolean = false):
                                                                                                   Array[(Int, Int)] = {
+    //val pairs = vectors.map(vector => (findClosest(vector, means), vector))
+    //val clusters = pairs.groupByKey
+    //val newMeans = clusters.map(cluster => averageVectors(cluster._2)).collect()
+
     // TODO: Fill in the newMeans array.
     val meanIdsMap: Map[Int, (Int, Int)] = (for {
       vector <- vectors
-    } yield (findClosest(vector, means), vector)).collect().toMap
+    } yield (findClosest(vector, means), vector)).groupByKey
+                                                  .map(cluster =>
+                                                    (cluster._1, averageVectors(cluster._2)))
+                                                  .collect()
+                                                  .toMap
 
     val newMeans = means.indices.map(i =>
       // If i is in the last calculated centroids else the old mean is used
@@ -297,7 +304,7 @@ class StackOverflow extends Serializable {
       // Get the median.
       val sortedScores = vs.map(_._2).toList.sorted
       val medianScore: Int    =
-        if (clusterSize % 2 == 0) sortedScores(clusterSize / 2 - 1) + sortedScores(clusterSize / 2)
+        if (clusterSize % 2 == 0) (sortedScores((clusterSize / 2) - 1) + sortedScores(clusterSize / 2)) / 2
         else sortedScores(clusterSize / 2)
 
       (langLabel, langPercent, clusterSize, medianScore)

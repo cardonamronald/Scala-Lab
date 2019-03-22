@@ -64,12 +64,4 @@ class StackOverflowSuite extends FunSuite with BeforeAndAfterAll {
     assert(vectors.count() === 26075)
     assert(vectors.take(2)(0)._1 === 4 * testObject.langSpread)
   }
-
-  test("kmeans") {
-    assert(means(0) === (1,0))
-  }
-
-  test("results") {
-    assert(results(0) ===  ("Java", 100, 1361, 0))
-  }
 }
