@@ -62,15 +62,20 @@ object TimeUsage {
     *         have type Double. None of the fields are nullable.
     * @param columnNames Column names of the DataFrame
     */
-  def dfSchema(columnNames: List[String]): StructType =
-    ???
-
+  def dfSchema(columnNames: List[String]): StructType = {
+    val headField = StructField(columnNames.head, StringType, nullable = false)
+    val fields = columnNames.tail.map(
+      fieldName => StructField(fieldName, DoubleType, nullable = false))
+    StructType(headField :: fields)
+  }
 
   /** @return An RDD Row compatible with the schema produced by `dfSchema`
     * @param line Raw fields
     */
-  def row(line: List[String]): Row =
-    ???
+  def row(line: List[String]): Row = {
+    val tail = line.tail.map(_.toDouble)
+    Row.fromSeq(line.head :: tail)
+  }
 
   /** @return The initial data frame columns partitioned in three groups: primary needs (sleeping, eating, etc.),
     *         work and other (leisure activities)
@@ -88,7 +93,23 @@ object TimeUsage {
     *    “t10”, “t12”, “t13”, “t14”, “t15”, “t16” and “t18” (those which are not part of the previous groups only).
     */
   def classifiedColumns(columnNames: List[String]): (List[Column], List[Column], List[Column]) = {
-    ???
+    val primary = Set("t01", "t03", "t11", "t1801", "t1803")
+    val working = Set("t05", "t1805")
+
+    val primaryNeeds = for {
+      name <- columnNames
+      prefix <- primary
+      if name.startsWith(prefix)
+    } yield name
+
+    val workingActivities = for {
+      name <- columnNames
+      prefix <- working
+      if name.startsWith(prefix)
+    } yield name
+
+    val leisure = columnNames.diff(primaryNeeds).diff(workingActivities)
+    (primaryNeeds.map(col), workingActivities.map(col), leisure.map(col)) // Create Column[String]
   }
 
   /** @return a projection of the initial DataFrame such that all columns containing hours spent on primary needs
