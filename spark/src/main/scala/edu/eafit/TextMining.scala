@@ -4,14 +4,21 @@ import java.nio.file.Paths
 
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.types.{StringType, StructField, StructType}
-import org.apache.spark.sql.{DataFrame, Row, SparkSession}
+import org.apache.spark.sql._
+import org.apache.spark.sql.expressions.UserDefinedFunction
 import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.sql.functions.udf
+
+// Stop words.
+import EnglishStopWords.englishStopWords
 
 object TextMining {
+
   /** Main function */
-  def main(args: Array[String]) = {
-    @transient lazy val conf: SparkConf = new SparkConf().setMaster("local[*]").setAppName("BigData")
-    //@transient lazy val sparkContext: SparkContext = new SparkContext(conf)
+  def main(args: Array[String]): Unit = {
+    @transient lazy val conf: SparkConf = new SparkConf()
+      .setMaster("local[*]")
+      .setAppName("BigData")
 
     val spark: SparkSession =
       SparkSession
@@ -27,7 +34,7 @@ object TextMining {
     import spark.implicits._
 
     // Read the data.
-    val newsDF: DataFrame = // apartments: DataFrame = [name: string, area: double, price double].
+    val df: DataFrame =
       spark
         .read
         .option(key = "header", value = "true")
@@ -37,29 +44,32 @@ object TextMining {
         .csv("src/main/resources/all-the-news/articles1.csv",
                       "src/main/resources/all-the-news/articles2.csv",
                       "src/main/resources/all-the-news/articles3.csv")
-    println(newsDF.count())
 
-    // No comments here.
+    // Clean the data.
+    val newsDF: DataFrame = df.select($"id", $"title", $"content")
+        .withColumn("content", removeStopWordsUdf($"content"))
+        .withColumn("title", removeStopWordsUdf($"title"))
+
+    newsDF.show()
+
+
+    // Build inverted index
+
+
     spark.stop()
   }
 
-  val schema = StructType(List(
-    StructField("id",StringType, true),
-    StructField("title", StringType, true),
-    StructField("content", StringType, true)))
-
-  case class Article(id: String, title: String, content: String)
-
-  ///** @return The filesystem path of the given resource */
-  //def fsPath(resource: String): String =
-    //Paths.get(this.getClass.getResource(resource).toURI).toString
-
-  def dropHeaders(data: RDD[String]): RDD[String] = {
-    data.mapPartitionsWithIndex((i, lines) => {
-      if(i == 0) {
-        lines.drop(1)
-      }
-      lines
-    })
+  /**
+    * Receives a String and return its clean version without stopwords nor quotation marks.
+    **/
+  def removeStopWords(content: String): String  = {
+    content
+      .toLowerCase
+      .split(" ")
+      .map(_.replaceAll("""[\p{Punct}]""", ""))
+      .filterNot(word => englishStopWords.contains(word))
+      .mkString(" ")
   }
+
+  val removeStopWordsUdf: UserDefinedFunction = udf(removeStopWords(_))
 }
