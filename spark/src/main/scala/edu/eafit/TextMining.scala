@@ -47,14 +47,12 @@ object TextMining {
 
     // Clean the data.
     val newsDF: DataFrame = df.select($"id", $"title", $"content")
-        .withColumn("content", removeStopWordsUdf($"content"))
-        .withColumn("title", removeStopWordsUdf($"title"))
+      .withColumn("content", removeStopWordsUdf($"content"))
+      .withColumn("title", removeStopWordsUdf($"title"))
 
     newsDF.show()
 
-
     // Build inverted index
-
 
     spark.stop()
   }
@@ -67,6 +65,7 @@ object TextMining {
       .toLowerCase
       .split(" ")
       .map(_.replaceAll("""[\p{Punct}]""", ""))
+      .filterNot(_.length == 1)
       .filterNot(word => englishStopWords.contains(word))
       .mkString(" ")
   }
