@@ -25,7 +25,7 @@ trait GameDef {
    *
    *   ^
    *   |
-   *
+   *   |
    *   row axis
    */
   case class Pos(row: Int, col: Int) {
@@ -51,13 +51,13 @@ trait GameDef {
   val goal: Pos
 
   /**
-   * The terrain is represented as a function from positions to
-   * booleans. The function returns `true` for every position that
-   * is inside the terrain.
-   *
-   * As explained in the documentation of class `Pos`, the `row` axis
-   * is the vertical one and increases from top to bottom.
-   */
+    * The terrain is represented as a function from positions to
+    * booleans. The function returns `true` for every position that
+    * is inside the terrain.
+    *
+    * As explained in the documentation of class `Pos`, the `row` axis
+    * is the vertical one and increases from top to bottom.
+    */
   type Terrain = Pos => Boolean
 
 
@@ -81,7 +81,7 @@ trait GameDef {
    * This function returns the block at the start position of
    * the game.
    */
-  def startBlock: Block = new Block(startPos, startPos)
+  def startBlock: Block = Block(startPos, startPos)
 
 
   /**
@@ -108,22 +108,22 @@ trait GameDef {
 
 
     /** The block obtained by moving left */
-    def left = if (isStanding)             deltaCol(-2, -1)
+    def left: Block = if (isStanding)             deltaCol(-2, -1)
                else if (b1.row == b2.row)  deltaCol(-1, -2)
                else                        deltaCol(-1, -1)
 
     /** The block obtained by moving right */
-    def right = if (isStanding)            deltaCol(1, 2)
+    def right: Block = if (isStanding)            deltaCol(1, 2)
                 else if (b1.row == b2.row) deltaCol(2, 1)
                 else                       deltaCol(1, 1)
 
     /** The block obtained by moving up */
-    def up = if (isStanding)               deltaRow(-2, -1)
+    def up: Block = if (isStanding)               deltaRow(-2, -1)
              else if (b1.row == b2.row)    deltaRow(-1, -1)
              else                          deltaRow(-1, -2)
 
     /** The block obtained by moving down */
-    def down = if (isStanding)             deltaRow(1, 2)
+    def down: Block = if (isStanding)             deltaRow(1, 2)
                else if (b1.row == b2.row)  deltaRow(1, 1)
                else                        deltaRow(2, 1)
 

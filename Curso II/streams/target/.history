@@ -53,3 +53,5 @@ compile
 exit
 clean
 exit
+compile
+clean

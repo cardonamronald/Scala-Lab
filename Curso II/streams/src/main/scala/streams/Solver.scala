@@ -1,6 +1,7 @@
 package streams
 
 import common._
+import scala.Stream._
 
 /**
   * This component implements the solver for the Bloxorz game
@@ -11,8 +12,7 @@ trait Solver extends GameDef {
     * Returns `true` if the block `b` is at the final position
     */
   def done(b: Block): Boolean =
-    if (b.isStanding && b.b1.row == goal.row && b.b1.col == goal.col)
-
+    b.isStanding && b.b1.row == goal.row && b.b2.col == goal.col
 
   def neighborsWithHistory(b: Block, history: List[Move]): Stream[(Block, List[Move])] = {
     b.legalNeighbors.map {
@@ -25,8 +25,10 @@ trait Solver extends GameDef {
     * positions that have already been explored. We will use it to
     * make sure that we don't explore circular paths.
     */
-  def newNeighborsOnly(neighbors: Stream[(Block, List[Move])], explored: Set[Block]): Stream[(Block, List[Move])] =
-    neighbors.filter(x => explored contains(x) == false)
+  def newNeighborsOnly(neighbors: Stream[(Block, List[Move])],
+                       explored: Set[Block]): Stream[(Block, List[Move])] = {
+    neighbors.filterNot(neighbor => explored.contains(neighbor._1))
+  }
 
   /**
     * The function `from` returns the stream of all possible paths
@@ -52,21 +54,20 @@ trait Solver extends GameDef {
     * construct the correctly sorted stream.
     */
   def from(initial: Stream[(Block, List[Move])],
-           explored: Set[Block]): Stream[(Block, List[Move])] = initial match {
-    // El pattern match habla por si solo
-    case Stream.empty => Stream.empty
+           explored: Set[Block]): Stream[(Block, List[Move])] =
+    initial match {
+    case Stream.Empty => Stream.empty
     case head #:: tail =>
-      //Aqui tomamos el bloque inicial
+      // Take initial block.
       val (block, moves) = head
-      // Se usan las funciones que programamos antes para obtener los vecinos
+
+      // Obtain available neighbors to visit.
       val candidates = neighborsWithHistory(block, moves)
-      // Se filtran por los bloques no visitados
       val availableNeighbors = newNeighborsOnly(candidates, explored)
-      // Se agregan los bloques no explorados a la lista de explorados
-      val exploredAumented = explored ++ (availableNeighbors.map(_._1))
-      //**Se añade el inicial al resultado y se hace el llamado recursivo
-      // con tail ++ los vecinos disponibles para ser visitados y el Set
-      // de explored con sus nuevos integrantes*/
+
+      // Update explored set
+      val exploredAumented = explored ++ availableNeighbors.map(_._1)
+
       head #:: from(tail ++ availableNeighbors, exploredAumented)
   }
 
@@ -74,14 +75,14 @@ trait Solver extends GameDef {
     * The stream of all paths that begin at the starting block.
     */
   lazy val pathsFromStart: Stream[(Block, List[Move])] =
-    from(Stream(startBlock, Nil), Set(startBlock))
+    from(Stream((startBlock, List())), Set(startBlock))
 
   /**
     * Returns a stream of all possible pairs of the goal block along
     * with the history how it was reached.
     */
   lazy val pathsToGoal: Stream[(Block, List[Move])] =
-    pathsFromStart.filter(block => done(block))
+    pathsFromStart.filter(pair => done(pair._1))
 
   /**
     * The (or one of the) shortest sequence(s) of moves to reach the
@@ -98,7 +99,7 @@ trait Solver extends GameDef {
 
     solutions match {
       case Stream.Empty => Nil
-      case x #:: xs     => x
+      case x #:: xs => x
     }
   }
 }
