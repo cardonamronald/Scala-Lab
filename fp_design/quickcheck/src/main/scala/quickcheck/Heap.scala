@@ -4,7 +4,7 @@ import common._
 
 trait IntHeap extends Heap {
   override type A = Int
-  override def ord = scala.math.Ordering.Int
+  override def ord: Ordering[Int] = scala.math.Ordering.Int
 }
 
 // http://www.brics.dk/RS/96/37/BRICS-RS-96-37.pdf

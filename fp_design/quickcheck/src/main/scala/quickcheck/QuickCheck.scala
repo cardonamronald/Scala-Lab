@@ -13,53 +13,64 @@ abstract class QuickCheckHeap extends Properties("Heap") with IntHeap {
   lazy val genHeap: Gen[H] = oneOf(
     const(empty),
     for {
-      one <- arbitrary[A]
+      a <- arbitrary[A]
       rest <- oneOf(const(empty), genHeap)
-    } yield insert(one, rest)
-  )
-
-  /*lazy val genNode: Gen[Node] = for {
-    x <- arbitrary[Int]
-    r <- arbitrary[Int]
-    c <- oneOf(const(List.empty), Arbitrary.arbitrary[List[genNode]])
-  } yield Node(x, r, c)*/
+    } yield insert(a, rest))
 
   implicit lazy val arbHeap: Arbitrary[H] = Arbitrary(genHeap)
-  //implicit lazy val arbNode: Arbitrary[Node] = Arbitrary(genNode)
 
-  property("gen1") = forAll { (h: H) =>
+
+  property("min1") = forAll { a: Int =>
+    val h = insert(a, empty)
+    findMin(h) == a
+  }
+
+  property("gen1") = forAll { h: H =>
     val m = if (isEmpty(h)) 0 else findMin(h)
     findMin(insert(m, h)) == m
   }
 
-  property("Bogus1 - Insercion Correcta") = forAll { (h: H) =>
-    val min = if (isEmpty(h)) 0 else findMin(h)
-    deleteMin(h)
-    findMin(insert(min, h)) == min
-  }
-
-  property("Hint1") = forAll{ (a: A, b: A) =>
-    findMin(insert(a, insert(b, empty))) == min(a, b)
-  }
-
-  property("Hint2") = forAll{ (n: A) =>
-    isEmpty(deleteMin(insert(n, empty)))
-  }
-
-  property("Hint3") = forAll { (h: H) =>
-    def secuencia(h1: H): List[Int] =
-      if (isEmpty(h1)) List.empty else findMin(h1) :: secuencia(deleteMin(h1))
-
-    def isSorted(list: List[Int], last: Int): Boolean = list match {
-      case Nil => true
-      case x :: Nil => last <= x
-      case x :: xs => last <= x && isSorted(xs, x)
+  property("insert any two elements into an empty heap") =
+    forAll { (a: A, b: A) =>
+      findMin(insert(a, insert(b, empty))) == min(a, b)
     }
-    isSorted(secuencia(h).tail, secuencia(h).head)
+
+  property("insert an element into an empty heap") =
+    forAll { a: A =>
+      isEmpty(deleteMin(insert(a, empty)))
+    }
+
+  property("sorted") =
+    forAll { heap: H =>
+      def sorted(heap: H, lastItem: Int): Boolean = heap match {
+        case empty => true
+        case _ =>
+          if (lastItem <= findMin(heap)) sorted(deleteMin(heap), findMin(heap))
+          else false
+      }
+
+      heap match {
+        case empty => true
+        case _ => sorted(deleteMin(heap), findMin(heap))
+      }
+    }
+
+  property("associative meld") = forAll { (h:H, i:H, j:H) =>
+    val a = meld(meld(h, i), j)
+    val b = meld(h, meld(i, j))
+    toList(a) == toList(b)
   }
 
-  property("Hint4") = forAll{ (h1: H, h2: H) =>
-    findMin(meld(h1, h2)) == findMin(h1) ||
-      findMin(meld(h1, h2)) == findMin(h2)
+  property("melding minima") = forAll {(h1: H, h2: H) =>
+    val a = if (isEmpty(h1)) 0 else findMin(h1)
+    val b = if (isEmpty(h2)) 0 else findMin(h2)
+
+    val merge = meld(h1, h2)
+    if (isEmpty(merge)) true
+    else findMin(merge) == a || findMin(merge) == b
   }
+
+  def toList(h: H): List[Int] =
+    if (isEmpty(h)) Nil
+    else findMin(h) :: toList(deleteMin(h))
 }
