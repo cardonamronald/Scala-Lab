@@ -2,7 +2,7 @@ package Week3
 
 class BankAccount {
   private var balance = 0
-  def deposit(amount: Int): Unit {
+  def deposit(amount: Int): Unit  = {
     if (amount > 0) balance = balance + amount
   }
   def withDraw(amount: Int): Int =

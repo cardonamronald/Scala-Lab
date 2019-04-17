@@ -1,8 +1,9 @@
 package Week3
 
 /**
-  * Created by RONALD on 26/10/2017.
+  * Example taken by the reactive programming course by Martin Odesky.
   */
+
 trait Parameters {
   def InverterDelay = 2
   def AndGateDelay = 3

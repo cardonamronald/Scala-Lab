@@ -5,8 +5,8 @@ import org.scalajs.dom
 import org.scalajs.dom.html
 import dom.document
 
-object CalculatorUI extends js.JSApp {
-  def main(): Unit = {
+object CalculatorUI {
+  def main(args: Array[String]): Unit = {
     try {
       setupTweetMeasurer()
       setup2ndOrderPolynomial()

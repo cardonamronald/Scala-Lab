@@ -1,7 +1,9 @@
 package Week3
+
 /**
-  * Created by RONALD on 26/10/2017.
+  * Example taken by the reactive programming course by Martin Odesky.
   */
+
 abstract class Gates extends Simulation {
   def InverterDelay: Int
   def AndGateDelay: Int
@@ -11,16 +13,16 @@ abstract class Gates extends Simulation {
     private var sigVal = false
     private var actions: List[Action] = List()
 
-    def getSignal = sigVal
+    def getSignal: Boolean = sigVal
 
-    def setSignal(signal: Boolean) =
+    def setSignal(signal: Boolean): Unit =
       if (signal != sigVal) {
         sigVal = signal
         actions foreach(_())
       }
 
-    def addAction(action: Action) = {
-      actions = a :: actions
+    def addAction(action: Action): Unit = {
+      actions = action :: actions
       action()
     }
   }
@@ -32,22 +34,22 @@ abstract class Gates extends Simulation {
         output setSignal !inputSig
       }
     }
-    input addAction invertAction
+    input.addAction(invertAction)
   }
 
-  def andGate(in1: Wire, in2: Wire, output: Wire) = {
+  def andGate(in1: Wire, in2: Wire, output: Wire): Unit = {
     def andAction() = {
       val in1Sig = in1.getSignal
       val in2Sig = in2.getSignal
       afterDelay(AndGateDelay) {
-        output setSignal (in1Sig & in2Sig)
+        output.setSignal(in1Sig & in2Sig)
       }
     }
-    in1 addAction andAction
-    in2 addAction andAction
+    in1.addAction(andAction)
+    in2.addAction(andAction)
   }
 
-  def orGate(in1: Wire, in2: Wire, output: Wire) = {
+  def orGate(in1: Wire, in2: Wire, output: Wire): Unit = {
     def orAction() = {
       val in1Sig = in1.getSignal
       val in2Sig = in2.getSignal
@@ -55,14 +57,14 @@ abstract class Gates extends Simulation {
         output setSignal (in1Sig | in2Sig)
       }
     }
-    in1 addAction orAction
-    in2 addAction orAction
+    in1.addAction(orAction)
+    in2.addAction(orAction)
   }
 
   def probe(name: String, wire: Wire): Unit = {
-    def probeAction(): Unit {
+    def probeAction(): Unit  = {
       println(s"$name $currentTime value = ${wire.getSignal}")
     }
-    wire addAction probeAction
+    wire.addAction(probeAction)
   }
 }

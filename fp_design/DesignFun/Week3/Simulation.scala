@@ -1,14 +1,17 @@
 package Week3
+
 /**
-  * Created by RONALD on 26/10/2017.
+  * Example taken by the reactive programming course by Martin Odesky.
   */
+
 abstract class Simulation {
   type Action = () => Unit
 
   case class Event(time: Int, action: Action)
 
   private var curtime = 0
-  def currentTime = curtime
+
+  def currentTime: Int = curtime
 
   private var agenda: List[Event] = List()
 
@@ -37,3 +40,4 @@ abstract class Simulation {
       loop()
     case Nil =>
   }
+}
