@@ -6,7 +6,7 @@ trait Publisher {
   def subscribe(subscriber: Subscriber): Unit =
     subscribers += subscriber
 
-  def unsubscribe(subscriber: subscriber): Unit =
+  def unsubscribe(subscriber: Subscriber): Unit =
     subscribers -= subscriber
 
   def publish(): Unit =
