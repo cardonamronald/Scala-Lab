@@ -1,20 +1,25 @@
 package BankAccountWithSignals
 
-object accounts {
+
+object accounts extends App {
   def consolidated(accts: List[BankAccount]): Signal[Int] =
-    Signal(accts.map(_.balance()).sum)
+    Signal(accts.map(_.balance()).sum(implicitly[Numeric[Int]]))
 
   val a = new BankAccount
   val b = new BankAccount
   val c = consolidated(List(a, b))
-  c()
+
+  print(c())
   a deposit 20
-  c()
+  print(c())
   b deposit 30
-  c()
+  print(c())
+
   val xchange = Signal(246.00)
+
   val inDollar = Signal(c() * xchange())
+
   inDollar()
-  B withDraw 10
-  inDollar()
+  b withDraw 10
+  print(inDollar())
 }
