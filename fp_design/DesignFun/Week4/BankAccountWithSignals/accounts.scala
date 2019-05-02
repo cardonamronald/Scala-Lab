@@ -1,5 +1,7 @@
 package BankAccountWithSignals
 
+// This code do not compile because the implementation
+// if Signal class is not in scope
 
 object accounts extends App {
   def consolidated(accts: List[BankAccount]): Signal[Int] =
