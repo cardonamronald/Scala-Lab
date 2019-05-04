@@ -11,22 +11,27 @@ final case class Times(a: Expr, b: Expr) extends Expr
 final case class Divide(a: Expr, b: Expr) extends Expr
 
 object Calculator {
-  def computeValues(
-      namedExpressions: Map[String, Signal[Expr]]): Map[String, Signal[Double]] = {
-    namedExpressions.mapValues(signal =>
-      Signal{
-        eval(signal(), namedExpressions)
-      })
+  def computeValues(namedExpressions: Map[String, Signal[Expr]]):
+                                                      Map[String, Signal[Double]] = {
+    namedExpressions.map(
+      { case (name, signal) => name -> Signal {
+          eval(signal(), namedExpressions, List(name))
+        }
+      }
+    )
   }
 
-  def eval(expr: Expr, references: Map[String, Signal[Expr]]): Double = {
+  def eval(expr: Expr, references: Map[String, Signal[Expr]], path: List[String]): Double = {
     expr match {
       case Literal(v) => v
-      case Ref(name) => eval(getReferenceExpr(name, references), references)
-      case Plus(a, b) => eval(a, references) + eval(b, references)
-      case Minus(a, b) => eval(a, references) - eval(b, references)
-      case Times(a, b) => eval(a, references) * eval(b, references)
-      case Divide(a, b) => Try(eval(a, references) / eval(b, references)) match {
+      case Ref(name) => {
+        if (path.contains(name)) Double.NaN
+        else eval(getReferenceExpr(name, references), references, name :: path)
+      }
+      case Plus(a, b) => eval(a, references, path) + eval(b, references, path)
+      case Minus(a, b) => eval(a, references, path) - eval(b, references, path)
+      case Times(a, b) => eval(a, references, path) * eval(b, references, path)
+      case Divide(a, b) => Try(eval(a, references, path) / eval(b, references, path)) match {
         case Success(value) => value
         case Failure(exception) => Double.NaN
       }
