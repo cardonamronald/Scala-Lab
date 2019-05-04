@@ -11,8 +11,8 @@ object TweetLength {
     Signal {
       remainingCharsCount() match {
         case c if (c >= 15) => "green"
-        case c if (c >= 0)  => "orange"
-        case _              => "red"
+        case c if (c >= 0) => "orange"
+        case _ => "red"
       }
     }
   }
