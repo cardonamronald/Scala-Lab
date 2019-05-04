@@ -1,5 +1,7 @@
 package calculator
 
+import scala.util.{Try, Success, Failure}
+
 sealed abstract class Expr
 final case class Literal(v: Double) extends Expr
 final case class Ref(name: String) extends Expr
@@ -11,11 +13,24 @@ final case class Divide(a: Expr, b: Expr) extends Expr
 object Calculator {
   def computeValues(
       namedExpressions: Map[String, Signal[Expr]]): Map[String, Signal[Double]] = {
-    ???
+    namedExpressions.mapValues(signal =>
+      Signal{
+        eval(signal(), namedExpressions)
+      })
   }
 
   def eval(expr: Expr, references: Map[String, Signal[Expr]]): Double = {
-    ???
+    expr match {
+      case Literal(v) => v
+      case Ref(name) => eval(getReferenceExpr(name, references), references)
+      case Plus(a, b) => eval(a, references) + eval(b, references)
+      case Minus(a, b) => eval(a, references) - eval(b, references)
+      case Times(a, b) => eval(a, references) * eval(b, references)
+      case Divide(a, b) => Try(eval(a, references) / eval(b, references)) match {
+        case Success(value) => value
+        case Failure(exception) => Double.NaN
+      }
+    }
   }
 
   /** Get the Expr for a referenced variables.
