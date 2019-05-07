@@ -49,7 +49,7 @@ object stackoverflow {
         .where("FormalEducation != 'Primary/elementary school'")
         .where("FormalEducation != 'I never completed any formal education'")
 
-    val topLangs: Array[String] = mostPopularLangs(pro_devs).keys.take(10)x
+    val topLangs: Array[String] = mostPopularLangs(pro_devs).keys.take(10)
 
     spark.stop()
   }
