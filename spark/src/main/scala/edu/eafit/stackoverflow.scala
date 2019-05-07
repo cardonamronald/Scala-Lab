@@ -109,16 +109,4 @@ object stackoverflow {
       .groupBy("Age")
       .count()
   }
-
-  def averageAgeByCountry(df: DataFrame) = {
-    ???
-  }
-
-  def languageSpecific(df: DataFrame, lang: String): DataFrame = {
-    val ers: DataFrame = df.filter(df("LanguageWorkedWith").contains(lang))
-    val scalaStudents: DataFrame = students(ers)
-    val scalaGeo: DataFrame = geography(ers)
-    val otherTools: RDD[(String, Int)] = mostPopularLangs(ers)
-    ???
-  }
 }
