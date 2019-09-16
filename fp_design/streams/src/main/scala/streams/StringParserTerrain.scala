@@ -1,7 +1,5 @@
 package streams
 
-import javafx.geometry.Pos
-
 import common._
 
 /**
@@ -77,7 +75,7 @@ trait StringParserTerrain extends GameDef {
       row <- levelVector.indices
       col <- levelVector(0).indices
       if levelVector(row)(col) == c
-    } yield Pos(row, col)).head
+  } yield Pos(row, col)).head
 
   private lazy val vector: Vector[Vector[Char]] =
     Vector(level.split("\n").map(str => Vector(str: _*)): _*)

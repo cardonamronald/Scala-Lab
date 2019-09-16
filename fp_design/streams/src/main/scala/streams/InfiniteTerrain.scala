@@ -7,8 +7,8 @@ package streams
  * It keeps the `startPos` and the `goal` positions abstract.
  *
  * Using this trait is useful for testing. It can be used to find
- * the shortest path between two positions without terrain
- * restrictions.
+  * * * the shortest path between two positions without terrain
+  * * * restrictions.
  */
 trait InfiniteTerrain extends GameDef {
   val terrain: Terrain = (pos: Pos) => true

@@ -2,7 +2,7 @@
 name := "intro-cats"
 organization := "co.edu.eafit.dis.progfun"
 version := "0.1.0"
-scalaVersion := "2.12.6"
+scalaVersion := "2.12.8"
 scalacOptions ++= Seq(
   "-deprecation",
   "-encoding", "utf-8",
