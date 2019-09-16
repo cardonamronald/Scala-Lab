@@ -1,5 +1,3 @@
-package co.edu.eafit.dis.progfun.scala.intro
-
 object Exercise1 extends App {
     def and(x: Boolean, y: Boolean): Boolean = if(x) y else false
     

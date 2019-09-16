@@ -1,5 +1,3 @@
-package co.edu.eafit.dis.progfun.scala.intro
-
 object Exercise3 extends App {
   def gcd(a: Int, b: Int): Int =
     if (b == 0) a else gcd(a, a % b)

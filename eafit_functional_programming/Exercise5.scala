@@ -1,5 +1,3 @@
-package co.edu.eafit.dis.progfun.scala.intro
-
 object Exercise5 extends App {
   def factorial(x: Int): Int = if (x <= 1) 1 else x * factorial(x - 1)
 

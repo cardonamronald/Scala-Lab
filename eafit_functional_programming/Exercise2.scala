@@ -1,5 +1,3 @@
-package co.edu.eafit.dis.progfun.scala.intro
-
 object Exercise2 extends App {
 
   def abs(x: Double): Double = if (x < 0) -x else x
