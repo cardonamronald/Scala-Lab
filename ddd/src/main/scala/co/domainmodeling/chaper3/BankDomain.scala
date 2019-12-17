@@ -4,7 +4,7 @@ import java.util.{Calendar, Date}
 
 import scala.util.{Failure, Success, Try}
 
-object BankDomain { 
+object BankDomain {
   type Amount = BigDecimal
 
   def today: Date = Calendar.getInstance.getTime
