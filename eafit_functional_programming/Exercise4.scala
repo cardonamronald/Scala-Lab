@@ -1,3 +1,5 @@
+package co.edu.eafit.dis.progfun.scala.intro
+
 object Exercise4 extends App {
   def sumInts(a: Int, b: Int): Int = if (a > b) 0 else a + sumInts(a + 1, b)
 
@@ -18,16 +20,22 @@ object Exercise4 extends App {
   def factorial(x: Int): Int = if (x <= 1) 1 else x * factorial(x - 1)
 
   // Anonymous functions
-  (x: Int) => x * x * x // Cube
-  (x: Int) => x // Identity
+  //(x: Int) => x * x * x // Cube
+  //(x: Int) => x // Identity
 
   // Exercise
   def tailRecsum(f: Int => Int, a: Int, b: Int): Int = {
     def loop(a: Int, acc: Int): Int = {
-      if (???) ???
-      else loop(???, ???)
+      if (a > b) acc
+      else loop(a + 1, f(a) + acc)
     }
 
-    loop(???, ???)
+    loop(a, 0)
   }
+
+
+  trait Expr
+  case class Number(n: Int) extends Expr
+  case class Sum(e1: Expr, e2: Expr) extends Expr
+  case class Var(name: String) extends Expr
 }

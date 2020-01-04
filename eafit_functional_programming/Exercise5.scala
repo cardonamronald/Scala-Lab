@@ -1,12 +1,10 @@
+package co.edu.eafit.dis.progfun.scala.intro
+
 object Exercise5 extends App {
   def factorial(x: Int): Int = if (x <= 1) 1 else x * factorial(x - 1)
 
-  def sum(f: Int => Int): (Int, Int) => Int = {
-    def sumF(a: Int, b: Int): Int =
-      if (a > b) 0
-      else f(a) + sumF(a + 1, b)
-    sumF
-  }
+  def sum(f: Int => Int)(a: Int, b: Int): Int =
+    if (a > b) 0 else f(a) + sum(f)(a + 1, b)
 
   def sumInts: (Int, Int) => Int = sum(x => x)
   def sumCubes: (Int, Int) => Int = sum(x => x * x * x)
@@ -25,7 +23,8 @@ object Exercise5 extends App {
   def factorialInTermsOfProduct(n: Int): Int = product(x => x)(1, n)
 
   def mapReduce(f: Int => Int, combine: (Int, Int) => Int, zero: Int)(a: Int, b: Int): Int =
-    if(a > b) zero else combine(f(a), mapReduce(f, combine, zero)(a + 1, b))
+    if (a > b) zero else combine(f(a), mapReduce(f, combine, zero)(a + 1, b))
+
 
   mapReduce(x => x, (x: Int, y: Int) => x * y, 1)(1, 5)
   mapReduce(x => x, (x: Int, y: Int) => x + y, 0)(0, 100)
