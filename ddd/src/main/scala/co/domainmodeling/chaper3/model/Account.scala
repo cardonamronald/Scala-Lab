@@ -1,8 +1,10 @@
 package co.domainmodeling.chaper3.model
 
 import java.util.Date
-import util.{Try, Success, Failure}
 
+import co.domainmodeling.chaper3.lens.Lens
+
+import util.{Failure, Success, Try}
 import common._
 
 sealed trait Account {
@@ -54,4 +56,20 @@ object Account {
       Success((od, closeDate))
     }
   }
+}
+
+trait CheckingAccountLenses {
+  val accountBalanceLenses: Lens[CheckingAccount, Balance] =
+    Lens[CheckingAccount, Balance](
+      get = _.balance,
+      set = (checkingAccount, balance) => checkingAccount.copy(balance = balance)
+    )
+}
+
+trait SavingsAccountLenses {
+  val accountBalanceLenses: Lens[SavingsAccount, Balance] =
+    Lens[SavingsAccount, Balance](
+      get = _.balance,
+      set = (savingsAccount, balance) => savingsAccount.copy(balance = balance)
+    )
 }

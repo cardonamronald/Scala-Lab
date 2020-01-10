@@ -1,29 +1,27 @@
 package co.domainmodeling.chaper3.service
 
-import co.domainmodeling.chaper3.Lens
-import co.domainmodeling.chaper3.Lens._
+import co.domainmodeling.chaper3.lens.Lens
+import co.domainmodeling.chaper3.lens.Lens._
+import co.domainmodeling.chaper3.model._
+import co.domainmodeling.chaper3.model.common.Balance
+import common._
 
-case class Address(no: String, street: String, city: String, state: String, zip: String)
+object Main extends App
+  with CustomerLenses
+  with AddressLenses
+  with CheckingAccountLenses {
 
-case class Customer(id: Int, name: String, address: Address)
+  val a: Address = Address(no = "B-12", street = "Monroe Street", city = "Denver", state = "CO", zip = "80231")
+  val c: Customer = Customer(12, "John D Cook", a)
 
-object Main extends App {
-  val addressLenses: Lens[Address, String] = Lens[Address, String] (
-    get = _.no,
-    set = (o, v) => o.copy(no = v)
-  )
+  val custAddrNoLens: Lens[Customer, String] = compose(custAddressLens, noLenses)
 
-  val custAddressLens = Lens[Customer, Address](
-    get = _.address,
-    set = (o, v) => o.copy(address = v)
-  )
+  println(custAddrNoLens.get(c))
+  println(custAddrNoLens.set(c, "B675"))
 
 
-  val a = Address(no = "B-12", street = "Monroe Street", city = "Denver", state = "CO", zip = "80231")
-  val c = Customer(12, "John D Cook", a)
+  val account = CheckingAccount("55757827742", "Ronald Cardona", Some(today), None, Balance(250))
 
-  val custAddrNoLens = compose(custAddressLens, addressLenses)
 
-  custAddrNoLens.get(c)
-  custAddrNoLens.set(c, "B675")
+  println(accountBalanceLenses.set(account, Balance(33)))
 }

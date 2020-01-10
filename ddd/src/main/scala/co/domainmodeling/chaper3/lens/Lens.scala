@@ -1,9 +1,7 @@
-package co.domainmodeling.chaper3
+package co.domainmodeling.chaper3.lens
 
-case class Lens[O, V] (
-                        get: O => V,
-                        set: (O, V) => O
-                      )
+case class Lens[O, V] (get: O => V,
+                        set: (O, V) => O)
 object Lens {
   def compose[Outer, Inner, Value](
                                     outer: Lens[Outer, Inner],
