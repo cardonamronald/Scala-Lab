@@ -24,4 +24,11 @@ object Main extends App
 
 
   println(accountBalanceLenses.set(account, Balance(33)))
+
+  def op(no: String) = for {
+    _ <- credit(no, BigDecimal(100))
+    _ <- credit(no, BigDecimal(300))
+    _ <- debit(no, BigDecimal(160))
+    b <- balance(no)
+  } yield b
 }
