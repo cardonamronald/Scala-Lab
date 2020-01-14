@@ -1,8 +1,8 @@
 import cats.instances.int._
 import cats.syntax.semigroup._
 import cats.Monoid
-  //Un type class es una solucion estandar para un problema recurrente, ejemplo combinar cosas
-  //Las type classes tienen herencia en scala, monoide es una subclase de semigroup
+  // Un type class es una solucion estandar para un problema recurrente, ejemplo combinar cosas
+  // L@s type classes tienen herencia en scala, monoid es una subclase de semigroup
 
   implicitly[Monoid[Int]].combine(1, 2)
 
