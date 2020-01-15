@@ -14,11 +14,11 @@ object JsonWriter {
         JsString(value)
     }
 
-  implicit def optionWriter[A : JsonWriter]: JsonWriter[Option[A]] = {
+  implicit def optionWriter[A: JsonWriter]: JsonWriter[Option[A]] = {
     new JsonWriter[Option[A]] {
       def write(value: Option[A]): Json = value match {
         case Some(value) => implicitly[JsonWriter[A]].write(value)
-        case None => JsNull
+        case None        => JsNull
       }
     }
   }

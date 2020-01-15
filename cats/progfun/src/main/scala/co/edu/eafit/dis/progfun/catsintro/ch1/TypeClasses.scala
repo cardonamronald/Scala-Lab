@@ -50,7 +50,7 @@ object TypeClasses extends App {
     }
 
   // Example: type safe equality
-  List(1, 2, 3).map(Option(_)).filter(item => item == Some(1)) // Here the predicate of the filter always fails
+  // List(1, 2, 3).map(Option(_)).filter(item => item == 1) // Here the predicate of the filter always fails(dont even compile)
   // Because its comparing Int and Option[Int]
 
   import cats.Eq
