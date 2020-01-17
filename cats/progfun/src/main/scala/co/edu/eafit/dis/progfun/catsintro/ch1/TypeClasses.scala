@@ -8,7 +8,7 @@ object TypeClasses extends App {
   import cats.instances.int._
   import cats.instances.string._
 
-  val showInt: Show[Int] = Show.apply[Int]
+  val showInt: Show[Int]       = Show.apply[Int]
   val showString: Show[String] = Show.apply[String]
 
   val intAsString: String =
@@ -26,7 +26,6 @@ object TypeClasses extends App {
   "abc".show
   1.show
   val a: (String, Int) = ("Pedro", 19)
-
 
   case class Cat(name: String, age: Int, color: String)
 
@@ -54,7 +53,7 @@ object TypeClasses extends App {
   // Because its comparing Int and Option[Int]
 
   import cats.Eq
-  import cats.instances.int._ //Instances for Int
+  import cats.instances.int._
   import cats.instances.option._ //And Option[T]
 
   val eqInt = Eq[Int]
@@ -80,6 +79,7 @@ object TypeClasses extends App {
   // Define our own instances of Eq using the Eq instance method
 
   import java.util.Date
+
   import cats.instances.long._ // for Eq
 
   implicit val dateEq: Eq[Date] = // My own instance of Eq
@@ -92,21 +92,20 @@ object TypeClasses extends App {
   x === x
   x === y
 
-
   // Eq for Cat
 
-  import cats.instances.string._
   import cats.instances.int._
+  import cats.instances.string._
 
   implicit val catEq: Eq[Cat] =
     Eq.instance[Cat] { (cat1: Cat, cat2: Cat) =>
       cat1.name === cat2.name &&
-        cat1.age === cat2.age &&
-        cat1.color === cat2.color
+      cat1.age === cat2.age &&
+      cat1.color === cat2.color
     }
 
-  val cat1 = Cat("Garfield", 38, "orange and black")
-  val cat2 = Cat("Heathcliff", 33, "orange and black")
+  val cat1       = Cat("Garfield", 38, "orange and black")
+  val cat2       = Cat("Heathcliff", 33, "orange and black")
   val optionCat1 = Option(cat1)
   val optionCat2 = Option.empty[Cat]
 
@@ -115,7 +114,6 @@ object TypeClasses extends App {
   optionCat1 === optionCat2
   optionCat1 =!= optionCat2
 
-
   trait F[+A] // the "+" means "covariant"
 
   sealed trait Shape
@@ -123,5 +121,5 @@ object TypeClasses extends App {
   case class Circle(radius: Double) extends Shape
 
   val circles: List[Circle] = List(Circle(1), Circle(2), Circle(3), Circle(scala.math.Pi))
-  val shapes: List[Shape] = circles
+  val shapes: List[Shape]   = circles
 }

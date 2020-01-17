@@ -8,9 +8,10 @@ object Person {
   implicit val personWriter: JsonWriter[Person] =
     new JsonWriter[Person] {
       def write(value: Person): Json =
-        JsObject(Map(
-          "name" -> JsString(value.name),
-          "email" -> JsString(value.email)
-        ))
+        JsObject(
+          Map(
+            "name"  -> JsString(value.name),
+            "email" -> JsString(value.email)
+          ))
     }
 }
