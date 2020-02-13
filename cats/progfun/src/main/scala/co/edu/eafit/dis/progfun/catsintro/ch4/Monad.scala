@@ -14,7 +14,7 @@ trait Monad[F[_]] {
 
 object Monad {
 
-//Map function on Monad
+//Map function on Monad 
 //Pure -> Constructor
 
 //Monads in Cats
