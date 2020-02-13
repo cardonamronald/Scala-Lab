@@ -66,7 +66,7 @@ type Logged[A] = Writer[List[String], A]
   }
 
 // This approach doesn't force OptionT on other users' code:
-  val resultA = addAll("1", "2", "3")
+val resultA = addAll("1", "2", "3")
 val resultB = addAll("1", "a", "3")
 
 //Exercise
