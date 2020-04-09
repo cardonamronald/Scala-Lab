@@ -11,7 +11,6 @@ trait Printable[A] {
     }
 }
 
-final case class Box[A](value: A)
 
 object PrintableInstances {
   implicit val stringPrintable: Printable[String] = new Printable[String] {
