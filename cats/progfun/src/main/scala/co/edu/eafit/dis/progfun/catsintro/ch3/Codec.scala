@@ -1,6 +1,5 @@
 package co.edu.eafit.dis.progfun.catsintro.ch3
 
-
 /**
   * It's just follow the types :)
   * */
@@ -35,18 +34,18 @@ object CodecInstances {
   implicit val doubleCodec: Codec[Double] =
     stringCodec.imap(_.toDouble, _.toString)
 
-  implicit def boxCodec[A : Codec]: Codec[Box[A]] =
+  implicit def boxCodec[A: Codec]: Codec[Box[A]] =
     implicitly[Codec[A]].imap(Box.apply, _.value)
 }
 
 object CodecMain extends App {
   import CodecInstances._
 
-  def encode[A : Codec](value: A): String =
-      implicitly[Codec[A]].encode(value)
+  def encode[A: Codec](value: A): String =
+    implicitly[Codec[A]].encode(value)
 
-  def decode[A : Codec](value: String): A =
-      implicitly[Codec[A]].decode(value)
+  def decode[A: Codec](value: String): A =
+    implicitly[Codec[A]].decode(value)
 
   println(encode(123.4))
   // res0: String = 123.4

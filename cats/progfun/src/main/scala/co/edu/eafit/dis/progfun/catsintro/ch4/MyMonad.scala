@@ -12,6 +12,4 @@ trait MyMonad[F[_]] {
     flatMap(value)(func andThen pure) // Paso el valor, le aplico la funcion y lo meto en la caja :)
 }
 
-object MyMonad {
-
-}
+object MyMonad {}

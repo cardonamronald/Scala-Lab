@@ -1,4 +1,6 @@
 package co.edu.eafit.dis.progfun.catsintro.ch4
+import cats.Id
+
 import scala.concurrent.Future
 
 //Monads in Cats
@@ -31,8 +33,9 @@ object Monads extends App {
   Monad[Vector].flatMap(Vector(1, 2, 3))(a => Vector(a, a * 10))
 
   //fixes the implicit resolution required to summon the instance
-  import scala.concurrent.ExecutionContext.Implicits.global
   import cats.instances.future._
+
+  import scala.concurrent.ExecutionContext.Implicits.global
   val fm = Monad[Future]
 
   // Monad syntax
@@ -48,11 +51,9 @@ object Monads extends App {
   // that come wrapped in a monad of the user's choice
 
   import cats.Monad
-  import cats.syntax.flatMap._ // for flatMap
-  import cats.syntax.functor._  // for map
-
-  def sumSquare[F[_]: Monad](a: F[Int], b: F[Int]): F[Int] =
-    a.flatMap(x => b.map(y => x * x + y * y))
+  import cats.syntax.flatMap._
+  import cats.syntax.functor._ // for map
+  val tenDividedSafe: Int => Option[Int] = x => if (x == 0) None else Some(10 / x)
 
   import cats.instances.list._
   import cats.instances.option._ // for Monad
@@ -61,13 +62,7 @@ object Monads extends App {
   sumSquare(List(1, 2, 3), List(4, 5))
   // res9: List[Int] = List(17, 26, 20, 29, 25, 34)
   sumSquare(Future(4), Future(5))
-
-  // A for-comprehension can do the same as above
-  def _sumSquare[F[_]: Monad](a: F[Int], b: F[Int]): F[Int] =
-    for {
-      x <- a
-      y <- b
-    } yield x * x + y * y
+  sumSquare(Monad[Id].pure(3), 4: Id[Int])
 
   implicit val OptionMonad: Monad[Option] = new Monad[Option] {
     override def pure[A](a: A): Option[A] = Some(a)
@@ -79,12 +74,22 @@ object Monads extends App {
       }
 
     override def map[A, B](fa: Option[A])(f: A => B): Option[B] =
-      flatMap(fa)(x => pure(f(x)))
+      flatMap(fa)(a => pure(f(a)))
 
     override def tailRecM[A, B](a: A)(f: A => Option[Either[A, B]]): Option[B] =
       ???
   }
-  val tenDividedSafe: Int => Option[Int] = x => if (x == 0) None else Some(10 / x)
-  val flatMapped3                        = OptionMonad.flatMap(Some(3))(tenDividedSafe)
-  val flatMapped4                        = OptionMonad.flatMap(Some(0))(tenDividedSafe)
+
+  val flatMapped3 = OptionMonad.flatMap(Some(3))(tenDividedSafe)
+  val flatMapped4 = OptionMonad.flatMap(Some(0))(tenDividedSafe)
+
+  def sumSquare[F[_]: Monad](a: F[Int], b: F[Int]): F[Int] =
+    a.flatMap(x => b.map(y => x * x + y * y))
+
+  // A for-comprehension can do the same as above
+  def _sumSquare[F[_]: Monad](a: F[Int], b: F[Int]): F[Int] =
+    for {
+      x <- a
+      y <- b
+    } yield x * x + y * y
 }
