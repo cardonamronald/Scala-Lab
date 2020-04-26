@@ -1,8 +1,8 @@
 package co.edu.eafit.dis.progfun.catsintro.ch4
 
 object Id extends App {
-
   import cats.Id
+
   def pure[A](value: A): Id[A] = value
 
   def map[A, B](initial: Id[A])(func: A => B): Id[B] = func(initial)

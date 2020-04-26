@@ -24,7 +24,11 @@ object BinaryTreeFunctor extends App {
     }
   }
 
-  treeFunctor.map(Tree.branch(Tree.leaf(10), Tree.branch(Tree.leaf(20), Tree.leaf(30))))(_ + 1)
+  treeFunctor.map(
+    Tree.branch(
+      Tree.leaf(10),
+      Tree.branch(
+        Tree.leaf(20), Tree.leaf(30))))(_ + 1)
 
   /**
     * Binary Tree Monad
@@ -32,7 +36,7 @@ object BinaryTreeFunctor extends App {
   implicit val TreeMonad: Monad[Tree] = new Monad[Tree] {
     override def pure[A](x: A): Tree[A] = Leaf(x)
 
-    //Saca del contexto y aplica la funcion
+    // Saca del contexto y aplica la funcion
     override def flatMap[A, B](fa: Tree[A])(f: A => Tree[B]): Tree[B] =
       fa match {
         case Branch(l, r) => Branch(flatMap(l)(f), flatMap(r)(f))

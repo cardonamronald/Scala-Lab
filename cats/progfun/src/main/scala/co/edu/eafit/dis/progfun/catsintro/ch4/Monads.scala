@@ -32,18 +32,20 @@ object Monads extends App {
   import cats.instances.vector._ // for Monad
   Monad[Vector].flatMap(Vector(1, 2, 3))(a => Vector(a, a * 10))
 
-  //fixes the implicit resolution required to summon the instance
+  // fixes the implicit resolution required to summon the instance
   import cats.instances.future._
 
   import scala.concurrent.ExecutionContext.Implicits.global
   val fm = Monad[Future]
 
   // Monad syntax
-  // Syntax, comes from Functor(for Map), flatMap(for flatMap),
+  // Syntax, comes from
+  // Functor(for Map),
+  // flatMap(for flatMap),
   // Applicative(for Pure)
   import cats.instances.list._
   import cats.instances.option._
-  import cats.syntax.applicative._ //Pure
+  import cats.syntax.applicative._ // for pure
   1.pure[Option]
   1.pure[List]
 
@@ -83,11 +85,12 @@ object Monads extends App {
   val flatMapped3 = OptionMonad.flatMap(Some(3))(tenDividedSafe)
   val flatMapped4 = OptionMonad.flatMap(Some(0))(tenDividedSafe)
 
+  // Note that sumSquare works for any Monad instance, even one that still doesn't exists
   def sumSquare[F[_]: Monad](a: F[Int], b: F[Int]): F[Int] =
     a.flatMap(x => b.map(y => x * x + y * y))
 
   // A for-comprehension can do the same as above
-  def _sumSquare[F[_]: Monad](a: F[Int], b: F[Int]): F[Int] =
+  def sumSquare1[F[_]: Monad](a: F[Int], b: F[Int]): F[Int] =
     for {
       x <- a
       y <- b
